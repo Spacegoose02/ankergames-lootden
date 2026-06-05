@@ -1,0 +1,69 @@
+{
+  "name": "AnkerGames Test",
+  "downloads": [
+    {
+      "title": "Neon Abyss",
+      "uris": [
+        "https://datanodes.to/ankergames-neon-abyss"
+      ],
+      "uploadDate": "2026-03-06T00:00:00.000Z",
+      "fileSize": "0.57 GB"
+    },
+    {
+      "title": "Red Dead Redemption 2",
+      "uris": [
+        "https://datanodes.to/ankergames-red-dead-redemption-2"
+      ],
+      "uploadDate": "2026-05-05T00:00:00.000Z",
+      "fileSize": "113 GB"
+    },
+    {
+      "title": "God of War",
+      "uris": [
+        "https://datanodes.to/ankergames-god-of-war"
+      ],
+      "uploadDate": "2026-03-30T00:00:00.000Z",
+      "fileSize": "36.5 GB"
+    },
+    {
+      "title": "Elden Ring",
+      "uris": [
+        "https://datanodes.to/ankergames-elden-ring"
+      ],
+      "uploadDate": "2026-06-02T00:00:00.000Z",
+      "fileSize": "64.91 GB"
+    },
+    {
+      "title": "Forza Horizon 5",
+      "uris": [
+        "https://datanodes.to/ankergames-forza-horizon-5"
+      ],
+      "uploadDate": "2026-02-26T00:00:00.000Z",
+      "fileSize": "166.6 GB"
+    },
+    {
+      "title": "Ghost Of Tsushima",
+      "uris": [
+        "https://datanodes.to/ankergames-ghost-of-tsushima"
+      ],
+      "uploadDate": "2026-02-25T00:00:00.000Z",
+      "fileSize": "58.2 GB"
+    },
+    {
+      "title": "SUPERNATURAL",
+      "uris": [
+        "https://datanodes.to/ankergames-supernatural"
+      ],
+      "uploadDate": "2026-03-16T00:00:00.000Z",
+      "fileSize": "9.4 GB"
+    },
+    {
+      "title": "BERSERK and the Band of the Hawk",
+      "uris": [
+        "https://datanodes.to/ankergames-berserk-and-the-band-of-the-hawk"
+      ],
+      "uploadDate": "2026-03-08T00:00:00.000Z",
+      "fileSize": "16.5 GB"
+    }
+  ]
+}
