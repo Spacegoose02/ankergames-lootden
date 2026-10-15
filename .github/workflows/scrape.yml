@@ -24,9 +24,9 @@ jobs:
         run: |
           pip install requests
 
-      - name: Run Scraper
+      - name: Run Scraper (Latest additions only)
         run: |
-          python scraper.py --resume
+          python scraper.py --limit 200 --no-dl
 
       - name: Commit and Push Changes
         run: |
