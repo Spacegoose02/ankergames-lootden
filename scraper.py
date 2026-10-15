@@ -52,25 +52,30 @@ def refresh_csrf(session: requests.Session) -> str:
 
 
 def get_game_urls_from_sitemaps(session: requests.Session) -> list[str]:
-    urls = []
+    entries = []
     ns = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
+
     for sitemap_url in SITEMAPS:
         resp = session.get(sitemap_url, timeout=15)
         resp.raise_for_status()
         root = ElementTree.fromstring(resp.content)
-        
-        # Collect URLs from this sitemap
-        sitemap_urls = []
-        for url_el in root.findall("sm:url", ns):
-            loc = url_el.find("sm:loc", ns).text
-            if "/game/" in loc:
-                sitemap_urls.append(loc)
-        
-        # Reverse them so the most recent additions come first
-        urls.extend(reversed(sitemap_urls))
 
-    print(f"[sitemaps] Found {len(urls)} game URLs")
-    return urls
+        for url_el in root.findall("sm:url", ns):
+            loc_el = url_el.find("sm:loc", ns)
+            lastmod_el = url_el.find("sm:lastmod", ns)
+
+            if loc_el is not None and loc_el.text and "/game/" in loc_el.text:
+                url = loc_el.text.strip()
+                # Default to oldest epoch if lastmod is missing
+                lastmod = lastmod_el.text.strip() if (lastmod_el is not None and lastmod_el.text) else "1970-01-01"
+                entries.append((lastmod, url))
+
+    # Sort descending: the most recently modified/updated games come first
+    entries.sort(key=lambda x: x[0], reverse=True)
+    sorted_urls = [url for _, url in entries]
+
+    print(f"[sitemaps] Found and sorted {len(sorted_urls)} game URLs by last modified")
+    return sorted_urls
 
 
 def parse_game_page(html: str) -> dict | None:
