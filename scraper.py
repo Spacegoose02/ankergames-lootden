@@ -23,8 +23,8 @@ from xml.etree import ElementTree
 from pathlib import Path
 
 SITEMAPS = [
-    "https://ankergames.net/sitemap_post_1.xml",
     "https://ankergames.net/sitemap_post_2.xml",
+    "https://ankergames.net/sitemap_post_1.xml",
 ]
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
@@ -58,10 +58,17 @@ def get_game_urls_from_sitemaps(session: requests.Session) -> list[str]:
         resp = session.get(sitemap_url, timeout=15)
         resp.raise_for_status()
         root = ElementTree.fromstring(resp.content)
+        
+        # Collect URLs from this sitemap
+        sitemap_urls = []
         for url_el in root.findall("sm:url", ns):
             loc = url_el.find("sm:loc", ns).text
             if "/game/" in loc:
-                urls.append(loc)
+                sitemap_urls.append(loc)
+        
+        # Reverse them so the most recent additions come first
+        urls.extend(reversed(sitemap_urls))
+
     print(f"[sitemaps] Found {len(urls)} game URLs")
     return urls
 
