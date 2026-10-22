@@ -11,15 +11,16 @@ Usage:
 Output: ankergames.json (Hydra download source format)
 Progress: progress.json (saved between runs for resume support)
 """
-import requests
-import re
-import json
-import time
 import argparse
+import json
+import re
 import sys
+import time
+from pathlib import Path
 from urllib.parse import unquote
 from xml.etree import ElementTree
-from pathlib import Path
+
+import requests
 
 SITEMAPS = [
     "https://ankergames.net/sitemap_post_1.xml",
@@ -75,9 +76,9 @@ def get_game_urls_from_sitemaps(session: requests.Session, newest: int = 0) -> l
         entries = entries[:newest]
     return [u for _, u in entries]
 
+
 def parse_game_page(html: str) -> dict | None:
     """Extract title, fileSize, uploadDate and downloadId from a game page."""
-    # Extract JSON-LD VideoGame schema
     jsonld_match = re.search(
         r'<script type="application/ld\+json">(.*?)</script>', html, re.DOTALL
     )
@@ -114,10 +115,8 @@ def generate_download_url(
     session: requests.Session, csrf: str, download_id: int, referer: str,
     max_retries: int = 6
 ) -> str | None:
-    """Call /generate-download-url/{id} and return the signed AnkerGames URL.
-    Rate limit: 15 requests per 3 minutes. Handles 429 with retry_after.
-    """
-    for attempt in range(max_retries):
+    """Call /generate-download-url/{id} and return the signed AnkerGames URL."""
+    for _ in range(max_retries):
         resp = session.post(
             f"https://ankergames.net/generate-download-url/{download_id}",
             json={"g-recaptcha-response": "development-mode"},
@@ -150,7 +149,8 @@ def generate_download_url(
             return None
         if data.get("success") and data.get("download_url"):
             return data["download_url"]
-        # Legacy 200-with-error rate limit (fallback detection)
+
+        # Legacy 200-with-error rate limit fallback
         error_msg = data.get("error", "")
         rl_match = re.search(r"wait\s+(\d+)\s+second", error_msg, re.IGNORECASE)
         if rl_match:
@@ -158,7 +158,6 @@ def generate_download_url(
             print(f" [rl {wait_sec}s]", end="", flush=True)
             time.sleep(wait_sec)
             continue
-        # Other error — no point retrying
         return None
     return None
 
@@ -176,7 +175,7 @@ def extract_dlproxy_url(session: requests.Session, ankergames_dl_url: str, depth
     for raw in candidates:
         url = unquote(raw).replace("\\/", "/")
 
-        # node*.datanodes.to:PORT/d/CODE/FILE  ->  datanodes.to/CODE/FILE
+        # node*.datanodes.to:PORT/d/CODE/FILE -> datanodes.to/CODE/FILE
         m = re.match(r"https://node\d+\.datanodes\.to(?::\d+)?/d/([^/]+)/(.+)", url)
         if m:
             return f"https://datanodes.to/{m.group(1)}/{m.group(2)}"
@@ -184,7 +183,7 @@ def extract_dlproxy_url(session: requests.Session, ankergames_dl_url: str, depth
             return url
         if "dlproxy.uk" in url:
             return re.sub(r"tunnel\d+\.dlproxy\.uk", "tunnel1.dlproxy.uk", url)
-        # intermediate ankergames page: follow it
+        # Follow intermediate ankergames page
         if "ankergames" in url and depth < 2:
             result = extract_dlproxy_url(session, url, depth + 1)
             if result:
@@ -221,7 +220,7 @@ def scrape(args: argparse.Namespace) -> None:
 
     print("[init] Refreshing CSRF token...")
     csrf = refresh_csrf(session)
-    print(f"[init] CSRF ready")
+    print("[init] CSRF ready")
 
     print("[sitemaps] Fetching game list...")
     all_urls = get_game_urls_from_sitemaps(session, args.newest)
@@ -230,11 +229,8 @@ def scrape(args: argparse.Namespace) -> None:
         all_urls = all_urls[: args.limit]
         print(f"[limit] Processing first {args.limit} games")
 
-    total = len(all_urls)
     downloads = []
-
-    # Re-load already completed entries
-    for url, entry in progress["completed"].items():
+    for entry in progress["completed"].values():
         downloads.append(entry)
 
     pending = [u for u in all_urls if u not in progress["completed"]]
@@ -243,7 +239,6 @@ def scrape(args: argparse.Namespace) -> None:
     for idx, game_url in enumerate(pending, start=1):
         slug = game_url.rstrip("/").split("/")[-1]
 
-        # Refresh CSRF periodically
         if idx % CSRF_REFRESH_INTERVAL == 0:
             try:
                 csrf = refresh_csrf(session)
@@ -254,7 +249,6 @@ def scrape(args: argparse.Namespace) -> None:
         print(f"[{idx}/{len(pending)}] {slug}", end="", flush=True)
 
         try:
-            # Step 1: Fetch game page
             resp = session.get(game_url, timeout=20)
             if resp.status_code != 200:
                 print(f" -> HTTP {resp.status_code} SKIP")
@@ -272,12 +266,11 @@ def scrape(args: argparse.Namespace) -> None:
 
             entry = {
                 "title": meta["title"],
-                "uris": [game_url],   # fallback: game page URL
+                "uris": [game_url],
                 "uploadDate": meta["uploadDate"],
                 "fileSize": meta["fileSize"],
             }
 
-            # Step 2: Generate actual download URL (optional)
             if not args.no_dl and meta.get("downloadId"):
                 dl_signed = generate_download_url(
                     session, csrf, meta["downloadId"], game_url
@@ -286,11 +279,10 @@ def scrape(args: argparse.Namespace) -> None:
                     dlproxy = extract_dlproxy_url(session, dl_signed)
                     if dlproxy:
                         entry["uris"] = [dlproxy]
-                        print(f" -> got URL", end="")
+                        print(" -> got URL", end="")
                     else:
-                        print(f" -> no proxy URL", end="")
+                        print(" -> no proxy URL", end="")
                 else:
-                    # CSRF may have expired, refresh and retry once
                     try:
                         csrf = refresh_csrf(session)
                         dl_signed = generate_download_url(
@@ -300,7 +292,7 @@ def scrape(args: argparse.Namespace) -> None:
                             dlproxy = extract_dlproxy_url(session, dl_signed)
                             if dlproxy:
                                 entry["uris"] = [dlproxy]
-                                print(f" -> retried OK", end="")
+                                print(" -> retried OK", end="")
                     except Exception:
                         pass
 
@@ -310,7 +302,6 @@ def scrape(args: argparse.Namespace) -> None:
             progress["completed"][game_url] = entry
             save_progress(progress)
 
-            # Periodically save full output
             if idx % 50 == 0:
                 save_output(downloads)
 
@@ -334,7 +325,7 @@ def scrape(args: argparse.Namespace) -> None:
 
 
 def fix_urls(args: argparse.Namespace) -> None:
-    """Second-pass: fill in download URLs for games that only have a page URL (fallback)."""
+    """Second-pass: fill in download URLs for games missing external links."""
     progress = load_progress()
     if not progress["completed"]:
         print("[fix] No progress file found. Run the scraper first.")
@@ -342,9 +333,8 @@ def fix_urls(args: argparse.Namespace) -> None:
 
     session = make_session()
     csrf = refresh_csrf(session)
-    print(f"[fix] CSRF ready. Scanning for games missing download URLs...")
+    print("[fix] CSRF ready. Scanning for games missing download URLs...")
 
-    # Find games whose only URI is an ankergames.net/game/ URL
     needs_fix = {
         url: entry
         for url, entry in progress["completed"].items()
@@ -361,7 +351,7 @@ def fix_urls(args: argparse.Namespace) -> None:
         if idx % CSRF_REFRESH_INTERVAL == 0:
             try:
                 csrf = refresh_csrf(session)
-                print(f"  [csrf] Refreshed")
+                print("  [csrf] Refreshed")
             except Exception:
                 pass
 
@@ -384,14 +374,14 @@ def fix_urls(args: argparse.Namespace) -> None:
                     entry["uris"] = [dlproxy]
                     progress["completed"][game_url] = entry
                     save_progress(progress)
-                    print(f" -> fixed")
+                    print(" -> fixed")
                     fixed += 1
-                    time.sleep(DELAY_AFTER_DL_URL)  # pace to avoid 429 wall
+                    time.sleep(DELAY_AFTER_DL_URL)
                     continue
                 else:
-                    print(f" -> no proxy URL")
+                    print(" -> no proxy URL")
             else:
-                print(f" -> API error")
+                print(" -> API error")
 
         except KeyboardInterrupt:
             print("\n[interrupt] Saving...")
@@ -404,7 +394,6 @@ def fix_urls(args: argparse.Namespace) -> None:
 
     print(f"\n[fix] Fixed {fixed}/{len(needs_fix)} games")
 
-    # Rebuild output JSON from progress
     downloads = list(progress["completed"].values())
     save_output(downloads)
 
@@ -412,12 +401,12 @@ def fix_urls(args: argparse.Namespace) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description="AnkerGames -> Hydra JSON scraper")
     parser.add_argument("--limit", type=int, default=0, help="Only process first N games")
-    parser.add_argument("--newest", type=int, default=0,
-                    help="Only process the N most recently updated games (e.g. 200)")
+    parser.add_argument("--newest", type=int, default=0, help="Only process the N most recently updated games")
     parser.add_argument("--resume", action="store_true", help="Resume interrupted scrape")
     parser.add_argument("--no-dl", action="store_true", help="Skip download URL generation (metadata only)")
     parser.add_argument("--fix-urls", action="store_true", help="Second pass: fill in missing download URLs")
     args = parser.parse_args()
+
     if args.fix_urls:
         fix_urls(args)
     else:
