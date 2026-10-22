@@ -10,17 +10,17 @@ from xml.etree import ElementTree
 import requests
 
 SITEMAPS = [
-    "https://ankergames.net/sitemap_post_1.xml",
     "https://ankergames.net/sitemap_post_2.xml",
+    "https://ankergames.net/sitemap_post_1.xml",
 ]
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
     "Accept-Language": "en-US,en;q=0.9",
 }
-DELAY_BETWEEN_GAMES = 1.5   # seconds between requests
-DELAY_AFTER_ERROR = 5.0     # seconds to wait after an error
-CSRF_REFRESH_INTERVAL = 50  # refresh CSRF token every N games
-DELAY_AFTER_DL_URL = 13.0   # seconds to wait after download URL fetch to avoid 429
+DELAY_BETWEEN_GAMES = 1.5   # polite delay between page reads
+DELAY_AFTER_ERROR = 5.0     # backoff delay on HTTP failure
+CSRF_REFRESH_INTERVAL = 50  # refresh CSRF token periodically
+DELAY_AFTER_DL_URL = 13.0   # minimum spacing between API calls to avoid 429
 OUTPUT_FILE = Path("ankergames.json")
 PROGRESS_FILE = Path("progress.json")
 
@@ -54,11 +54,10 @@ def get_game_urls_from_sitemaps(session: requests.Session, newest: int = 0) -> l
 
     if newest:
         if any(lm for lm, _ in entries):
-            # Sort descending by ISO timestamp in <lastmod>
             entries.sort(key=lambda e: e[0], reverse=True)
             print(f"[sitemaps] Keeping {newest} most recently modified")
         else:
-            print("[sitemaps] No <lastmod> in sitemap; using last entries as newest")
+            print("[sitemaps] No <lastmod> found in sitemap; using trailing entries as newest")
             entries.reverse()
         entries = entries[:newest]
     return [u for _, u in entries]
@@ -101,7 +100,7 @@ def generate_download_url(
     session: requests.Session, csrf: str, download_id: int, referer: str,
     max_retries: int = 6
 ) -> str | None:
-    """Call /generate-download-url/{id} and handle rate-limiting."""
+    """Request signed intermediate link and handle rate limiting."""
     for _ in range(max_retries):
         resp = session.post(
             f"https://ankergames.net/generate-download-url/{download_id}",
@@ -147,25 +146,52 @@ def generate_download_url(
     return None
 
 
-def extract_dlproxy_url(session: requests.Session, ankergames_dl_url: str) -> str | None:
-    """Extract direct download host URL using the direct match logic."""
-    resp = session.get(ankergames_dl_url, timeout=15)
-    if resp.status_code != 200:
+def extract_dlproxy_url(session: requests.Session, ankergames_dl_url: str, referer: str = "") -> str | None:
+    """Inspects redirects and page body to resolve datanodes or dlproxy targets."""
+    headers = {}
+    if referer:
+        headers["Referer"] = referer
+
+    try:
+        resp = session.get(ankergames_dl_url, headers=headers, timeout=15, allow_redirects=True)
+    except Exception:
         return None
 
-    matches = re.findall(r"downloadPage\('([^']+)'", resp.text)
-    if not matches:
-        return None
+    # Check if requests was directly redirected to the destination host
+    final_url = resp.url
+    if "datanodes.to" in final_url or "dlproxy.uk" in final_url:
+        if "dlproxy.uk" in final_url:
+            return re.sub(r"tunnel\d+\.dlproxy\.uk", "tunnel1.dlproxy.uk", final_url)
+        return final_url
 
-    url = unquote(matches[0])
+    # Check response history for location headers
+    for history_resp in resp.history:
+        loc = history_resp.headers.get("Location", "")
+        if "datanodes.to" in loc or "dlproxy.uk" in loc:
+            if "dlproxy.uk" in loc:
+                return re.sub(r"tunnel\d+\.dlproxy\.uk", "tunnel1.dlproxy.uk", loc)
+            return loc
 
-    if re.match(r"https://node\d+\.datanodes\.to", url):
-        return url
+    # Parse body and normalize unescaped slashes
+    text = unquote(resp.text.replace(r"\/", "/"))
 
-    if "dlproxy.uk" in url:
-        return re.sub(r"tunnel\d+\.dlproxy\.uk", "tunnel1.dlproxy.uk", url)
+    # Check for direct downloadPage function calls
+    matches = re.findall(r"downloadPage\(['\"]([^'\"]+)['\"]", text)
+    if matches:
+        raw_url = matches[0]
+        if "dlproxy.uk" in raw_url:
+            return re.sub(r"tunnel\d+\.dlproxy\.uk", "tunnel1.dlproxy.uk", raw_url)
+        return raw_url
 
-    return url
+    # Check for direct host links anywhere in script tags
+    raw_matches = re.findall(r"https?://[^\s'\"<>]*(?:datanodes\.to|dlproxy\.uk)[^\s'\"<>]*", text)
+    if raw_matches:
+        raw_url = raw_matches[0]
+        if "dlproxy.uk" in raw_url:
+            return re.sub(r"tunnel\d+\.dlproxy\.uk", "tunnel1.dlproxy.uk", raw_url)
+        return raw_url
+
+    return None
 
 
 def load_progress() -> dict:
@@ -250,7 +276,7 @@ def scrape(args: argparse.Namespace) -> None:
                     session, csrf, meta["downloadId"], game_url
                 )
                 if dl_signed:
-                    dlproxy = extract_dlproxy_url(session, dl_signed)
+                    dlproxy = extract_dlproxy_url(session, dl_signed, referer=game_url)
                     if dlproxy:
                         entry["uris"] = [dlproxy]
                         print(" -> got URL", end="")
@@ -263,7 +289,7 @@ def scrape(args: argparse.Namespace) -> None:
                             session, csrf, meta["downloadId"], game_url
                         )
                         if dl_signed:
-                            dlproxy = extract_dlproxy_url(session, dl_signed)
+                            dlproxy = extract_dlproxy_url(session, dl_signed, referer=game_url)
                             if dlproxy:
                                 entry["uris"] = [dlproxy]
                                 print(" -> retried OK", end="")
@@ -299,6 +325,7 @@ def scrape(args: argparse.Namespace) -> None:
 
 
 def fix_urls(args: argparse.Namespace) -> None:
+    """Processes progress entries still holding intermediate ankergames.net links."""
     progress = load_progress()
     if not progress["completed"]:
         print("[fix] No progress file found. Run the scraper first.")
@@ -306,15 +333,16 @@ def fix_urls(args: argparse.Namespace) -> None:
 
     session = make_session()
     csrf = refresh_csrf(session)
-    print("[fix] CSRF ready. Scanning for games missing download URLs...")
+    print("[fix] CSRF ready. Scanning for games missing direct download URLs...")
 
+    # Identify any items whose current URI contains ankergames.net
     needs_fix = {
         url: entry
         for url, entry in progress["completed"].items()
         if not entry.get("uris")
-        or not any(h in entry["uris"][0] for h in ("datanodes.to", "dlproxy.uk"))
+        or any("ankergames.net" in u for u in entry.get("uris", []))
     }
-    print(f"[fix] {len(needs_fix)} games need real download URLs\n")
+    print(f"[fix] {len(needs_fix)} games need target host resolution\n")
 
     fixed = 0
     for idx, (game_url, entry) in enumerate(needs_fix.items(), start=1):
@@ -329,32 +357,40 @@ def fix_urls(args: argparse.Namespace) -> None:
                 pass
 
         try:
-            resp = session.get(game_url, timeout=20)
-            meta = parse_game_page(resp.text)
-            if not meta or not meta.get("downloadId"):
-                print(" -> no download ID SKIP")
-                time.sleep(DELAY_BETWEEN_GAMES)
-                continue
+            current_uri = entry["uris"][0] if entry.get("uris") else ""
 
-            dl_signed = generate_download_url(session, csrf, meta["downloadId"], game_url)
-            if not dl_signed:
-                csrf = refresh_csrf(session)
-                dl_signed = generate_download_url(session, csrf, meta["downloadId"], game_url)
+            # Attempt extraction directly if intermediate download-file link is already stored
+            dlproxy = None
+            if "download-file" in current_uri:
+                dlproxy = extract_dlproxy_url(session, current_uri, referer=game_url)
 
-            if dl_signed:
-                dlproxy = extract_dlproxy_url(session, dl_signed)
-                if dlproxy:
-                    entry["uris"] = [dlproxy]
-                    progress["completed"][game_url] = entry
-                    save_progress(progress)
-                    print(" -> fixed")
-                    fixed += 1
-                    time.sleep(DELAY_AFTER_DL_URL)
+            # If that failed, regenerate via the API
+            if not dlproxy:
+                resp = session.get(game_url, timeout=20)
+                meta = parse_game_page(resp.text)
+                if not meta or not meta.get("downloadId"):
+                    print(" -> no download ID SKIP")
+                    time.sleep(DELAY_BETWEEN_GAMES)
                     continue
-                else:
-                    print(" -> no proxy URL")
+
+                dl_signed = generate_download_url(session, csrf, meta["downloadId"], game_url)
+                if not dl_signed:
+                    csrf = refresh_csrf(session)
+                    dl_signed = generate_download_url(session, csrf, meta["downloadId"], game_url)
+
+                if dl_signed:
+                    dlproxy = extract_dlproxy_url(session, dl_signed, referer=game_url)
+
+            if dlproxy:
+                entry["uris"] = [dlproxy]
+                progress["completed"][game_url] = entry
+                save_progress(progress)
+                print(" -> fixed")
+                fixed += 1
+                time.sleep(DELAY_AFTER_DL_URL)
             else:
-                print(" -> API error")
+                print(" -> no proxy URL")
+                time.sleep(DELAY_BETWEEN_GAMES)
 
         except KeyboardInterrupt:
             print("\n[interrupt] Saving...")
@@ -362,8 +398,7 @@ def fix_urls(args: argparse.Namespace) -> None:
             break
         except Exception as e:
             print(f" -> ERROR: {e}")
-
-        time.sleep(DELAY_BETWEEN_GAMES)
+            time.sleep(DELAY_BETWEEN_GAMES)
 
     print(f"\n[fix] Fixed {fixed}/{len(needs_fix)} games")
     downloads = list(progress["completed"].values())
@@ -376,7 +411,7 @@ def main() -> None:
     parser.add_argument("--newest", type=int, default=0, help="Process the N most recently updated games")
     parser.add_argument("--resume", action="store_true", help="Resume interrupted scrape")
     parser.add_argument("--no-dl", action="store_true", help="Skip download URL generation")
-    parser.add_argument("--fix-urls", action="store_true", help="Second pass: fill in missing download URLs")
+    parser.add_argument("--fix-urls", action="store_true", help="Second pass: fix unresolved download URLs")
     args = parser.parse_args()
 
     if args.fix_urls:
