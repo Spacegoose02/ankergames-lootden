@@ -163,8 +163,8 @@ def generate_download_url(
     return None
 
 
-def extract_dlproxy_url(session: requests.Session, applesauce_dl_url: str, depth: int = 0) -> str | None:
-    """Find the real datanodes/dlproxy URL, following intermediate Applesauce pages."""
+def extract_dlproxy_url(session: requests.Session, ankergames_dl_url: str, depth: int = 0) -> str | None:
+    """Find the real datanodes/dlproxy URL, following intermediate ankergames pages."""
     resp = session.get(ankergames_dl_url, timeout=15)
     if resp.status_code != 200:
         return None
@@ -184,8 +184,8 @@ def extract_dlproxy_url(session: requests.Session, applesauce_dl_url: str, depth
             return url
         if "dlproxy.uk" in url:
             return re.sub(r"tunnel\d+\.dlproxy\.uk", "tunnel1.dlproxy.uk", url)
-        # intermediate Applesauce page: follow it
-        if "applesauce" in url and depth < 2:
+        # intermediate ankergames page: follow it
+        if "ankergames" in url and depth < 2:
             result = extract_dlproxy_url(session, url, depth + 1)
             if result:
                 return result
