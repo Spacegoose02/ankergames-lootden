@@ -11,7 +11,6 @@ Usage:
 Output: ankergames.json (Hydra download source format)
 Progress: progress.json (saved between runs for resume support)
 """
-
 import requests
 import re
 import json
@@ -51,8 +50,8 @@ def refresh_csrf(session: requests.Session) -> str:
     return resp.json()["token"]
 
 
-def get_game_urls_from_sitemaps(session: requests.Session) -> list[str]:
-    urls = []
+def get_game_urls_from_sitemaps(session: requests.Session, newest: int = 0) -> list[str]:
+    entries = []  # (lastmod, url)
     ns = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
     for sitemap_url in SITEMAPS:
         resp = session.get(sitemap_url, timeout=15)
@@ -60,11 +59,21 @@ def get_game_urls_from_sitemaps(session: requests.Session) -> list[str]:
         root = ElementTree.fromstring(resp.content)
         for url_el in root.findall("sm:url", ns):
             loc = url_el.find("sm:loc", ns).text
-            if "/game/" in loc:
-                urls.append(loc)
-    print(f"[sitemaps] Found {len(urls)} game URLs")
-    return urls
+            if "/game/" not in loc:
+                continue
+            lm = url_el.find("sm:lastmod", ns)
+            entries.append((lm.text if lm is not None else "", loc))
+    print(f"[sitemaps] Found {len(entries)} game URLs")
 
+    if newest:
+        if any(lm for lm, _ in entries):
+            entries.sort(key=lambda e: e[0], reverse=True)  # ISO dates sort correctly as strings
+            print(f"[sitemaps] Keeping {newest} most recently modified")
+        else:
+            print("[sitemaps] No <lastmod> in sitemap; using last entries as newest (verify!)")
+            entries.reverse()
+        entries = entries[:newest]
+    return [u for _, u in entries]
 
 def parse_game_page(html: str) -> dict | None:
     """Extract title, fileSize, uploadDate and downloadId from a game page."""
@@ -195,8 +204,9 @@ def save_progress(progress: dict) -> None:
 
 
 def save_output(downloads: list) -> None:
+    downloads = sorted(downloads, key=lambda d: d.get("uploadDate", ""), reverse=True)
     catalog = {
-        "name": "AnkerGames",
+        "name": "Ankergames",
         "downloads": downloads,
     }
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
@@ -213,7 +223,7 @@ def scrape(args: argparse.Namespace) -> None:
     print(f"[init] CSRF ready")
 
     print("[sitemaps] Fetching game list...")
-    all_urls = get_game_urls_from_sitemaps(session)
+    all_urls = get_game_urls_from_sitemaps(session, args.newest)
 
     if args.limit:
         all_urls = all_urls[: args.limit]
@@ -400,6 +410,8 @@ def fix_urls(args: argparse.Namespace) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description="AnkerGames -> Hydra JSON scraper")
     parser.add_argument("--limit", type=int, default=0, help="Only process first N games")
+    parser.add_argument("--newest", type=int, default=0,
+                    help="Only process the N most recently updated games (e.g. 200)")
     parser.add_argument("--resume", action="store_true", help="Resume interrupted scrape")
     parser.add_argument("--no-dl", action="store_true", help="Skip download URL generation (metadata only)")
     parser.add_argument("--fix-urls", action="store_true", help="Second pass: fill in missing download URLs")
