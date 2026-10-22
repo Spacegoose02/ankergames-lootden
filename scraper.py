@@ -163,32 +163,33 @@ def generate_download_url(
     return None
 
 
-def extract_dlproxy_url(session: requests.Session, ankergames_dl_url: str) -> str | None:
-    """Load the treasure-box page and extract the actual download URL.
-
-    Converts node*.datanodes.to:PORT/d/CODE/FILE  →  datanodes.to/CODE/FILE
-    so Hydra's native Datanodes downloader can handle it properly.
-    Skips dlproxy.uk links (they expire quickly and can't be stored).
-    """
+def extract_dlproxy_url(session: requests.Session, applesauce_dl_url: str, depth: int = 0) -> str | None:
+    """Find the real datanodes/dlproxy URL, following intermediate Applesauce pages."""
     resp = session.get(ankergames_dl_url, timeout=15)
     if resp.status_code != 200:
         return None
-    matches = re.findall(r"downloadPage\('([^']+)'", resp.text)
-    if not matches:
-        return None
-    url = unquote(matches[0])
+    text = resp.text.replace("\\/", "/")
 
-    # node*.datanodes.to:PORT/d/CODE/FILE are permanent direct download URLs — keep as-is
-    if re.match(r"https://node\d+\.datanodes\.to", url):
-        return url
+    candidates = re.findall(r"downloadPage\('([^']+)'", text)
+    candidates += re.findall(r"https?://[^\s'\"<>]*(?:datanodes\.to|dlproxy\.uk)[^\s'\"<>]*", text)
 
-    # dlproxy.uk: replace dead tunnels with tunnel1 (alive, same token works on any tunnel)
-    if "dlproxy.uk" in url:
-        import re as _re
-        url = _re.sub(r"tunnel\d+\.dlproxy\.uk", "tunnel1.dlproxy.uk", url)
-        return url
+    for raw in candidates:
+        url = unquote(raw).replace("\\/", "/")
 
-    return url
+        # node*.datanodes.to:PORT/d/CODE/FILE  ->  datanodes.to/CODE/FILE
+        m = re.match(r"https://node\d+\.datanodes\.to(?::\d+)?/d/([^/]+)/(.+)", url)
+        if m:
+            return f"https://datanodes.to/{m.group(1)}/{m.group(2)}"
+        if "datanodes.to" in url:
+            return url
+        if "dlproxy.uk" in url:
+            return re.sub(r"tunnel\d+\.dlproxy\.uk", "tunnel1.dlproxy.uk", url)
+        # intermediate Applesauce page: follow it
+        if "applesauce" in url and depth < 2:
+            result = extract_dlproxy_url(session, url, depth + 1)
+            if result:
+                return result
+    return None
 
 
 def load_progress() -> dict:
@@ -347,7 +348,8 @@ def fix_urls(args: argparse.Namespace) -> None:
     needs_fix = {
         url: entry
         for url, entry in progress["completed"].items()
-        if entry.get("uris") and entry["uris"][0].startswith("https://ankergames.net/game/")
+        if not entry.get("uris")
+        or not any(h in entry["uris"][0] for h in ("datanodes.to", "dlproxy.uk"))
     }
     print(f"[fix] {len(needs_fix)} games need real download URLs\n")
 
