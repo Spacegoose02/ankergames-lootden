@@ -1,16 +1,3 @@
-"""
-AnkerGames -> Hydra Source Scraper
-Generates a Hydra-compatible JSON catalog from ankergames.net
-
-Usage:
-    python scraper.py              # Full scrape of all games
-    python scraper.py --limit 50   # Scrape first 50 games (for testing)
-    python scraper.py --resume     # Continue a previous interrupted run
-    python scraper.py --no-dl      # Metadata only, skip download URL generation
-
-Output: ankergames.json (Hydra download source format)
-Progress: progress.json (saved between runs for resume support)
-"""
 import argparse
 import json
 import re
