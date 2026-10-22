@@ -30,11 +30,10 @@ HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
     "Accept-Language": "en-US,en;q=0.9",
 }
-DELAY_BETWEEN_GAMES = 1.5   # seconds between requests (be polite)
+DELAY_BETWEEN_GAMES = 1.5   # seconds between requests
 DELAY_AFTER_ERROR = 5.0     # seconds to wait after an error
 CSRF_REFRESH_INTERVAL = 50  # refresh CSRF token every N games
-# Rate limit: 15 download URL requests per 3 minutes = 1 per 12 seconds min
-DELAY_AFTER_DL_URL = 13.0   # seconds to wait after a successful download URL fetch
+DELAY_AFTER_DL_URL = 13.0   # seconds to wait after download URL fetch to avoid 429
 OUTPUT_FILE = Path("ankergames.json")
 PROGRESS_FILE = Path("progress.json")
 
@@ -68,17 +67,18 @@ def get_game_urls_from_sitemaps(session: requests.Session, newest: int = 0) -> l
 
     if newest:
         if any(lm for lm, _ in entries):
-            entries.sort(key=lambda e: e[0], reverse=True)  # ISO dates sort correctly as strings
+            # Sort descending by ISO timestamp in <lastmod>
+            entries.sort(key=lambda e: e[0], reverse=True)
             print(f"[sitemaps] Keeping {newest} most recently modified")
         else:
-            print("[sitemaps] No <lastmod> in sitemap; using last entries as newest (verify!)")
+            print("[sitemaps] No <lastmod> in sitemap; using last entries as newest")
             entries.reverse()
         entries = entries[:newest]
     return [u for _, u in entries]
 
 
 def parse_game_page(html: str) -> dict | None:
-    """Extract title, fileSize, uploadDate and downloadId from a game page."""
+    """Extract metadata and download ID from the game page."""
     jsonld_match = re.search(
         r'<script type="application/ld\+json">(.*?)</script>', html, re.DOTALL
     )
@@ -95,7 +95,6 @@ def parse_game_page(html: str) -> dict | None:
     if not game_data:
         return None
 
-    # Extract download ID from Alpine.js call
     dl_id_match = re.search(r"generateDownloadUrl\((\d+)\)", html)
     download_id = int(dl_id_match.group(1)) if dl_id_match else None
 
@@ -115,7 +114,7 @@ def generate_download_url(
     session: requests.Session, csrf: str, download_id: int, referer: str,
     max_retries: int = 6
 ) -> str | None:
-    """Call /generate-download-url/{id} and return the signed AnkerGames URL."""
+    """Call /generate-download-url/{id} and handle rate-limiting."""
     for _ in range(max_retries):
         resp = session.post(
             f"https://ankergames.net/generate-download-url/{download_id}",
@@ -129,10 +128,8 @@ def generate_download_url(
             timeout=15,
         )
         if resp.status_code == 419:
-            # CSRF expired — caller should refresh and retry
-            return None
+            return None  # CSRF expired
         if resp.status_code == 429:
-            # Rate limited — use retry_after from JSON body
             try:
                 data = resp.json()
                 wait_sec = int(data.get("retry_after", 35)) + 3
@@ -143,14 +140,15 @@ def generate_download_url(
             continue
         if resp.status_code != 200:
             return None
+
         try:
             data = resp.json()
         except Exception:
             return None
+
         if data.get("success") and data.get("download_url"):
             return data["download_url"]
 
-        # Legacy 200-with-error rate limit fallback
         error_msg = data.get("error", "")
         rl_match = re.search(r"wait\s+(\d+)\s+second", error_msg, re.IGNORECASE)
         if rl_match:
@@ -162,33 +160,25 @@ def generate_download_url(
     return None
 
 
-def extract_dlproxy_url(session: requests.Session, ankergames_dl_url: str, depth: int = 0) -> str | None:
-    """Find the real datanodes/dlproxy URL, following intermediate ankergames pages."""
+def extract_dlproxy_url(session: requests.Session, ankergames_dl_url: str) -> str | None:
+    """Extract direct download host URL using the direct match logic."""
     resp = session.get(ankergames_dl_url, timeout=15)
     if resp.status_code != 200:
         return None
-    text = resp.text.replace("\\/", "/")
 
-    candidates = re.findall(r"downloadPage\('([^']+)'", text)
-    candidates += re.findall(r"https?://[^\s'\"<>]*(?:datanodes\.to|dlproxy\.uk)[^\s'\"<>]*", text)
+    matches = re.findall(r"downloadPage\('([^']+)'", resp.text)
+    if not matches:
+        return None
 
-    for raw in candidates:
-        url = unquote(raw).replace("\\/", "/")
+    url = unquote(matches[0])
 
-        # node*.datanodes.to:PORT/d/CODE/FILE -> datanodes.to/CODE/FILE
-        m = re.match(r"https://node\d+\.datanodes\.to(?::\d+)?/d/([^/]+)/(.+)", url)
-        if m:
-            return f"https://datanodes.to/{m.group(1)}/{m.group(2)}"
-        if "datanodes.to" in url:
-            return url
-        if "dlproxy.uk" in url:
-            return re.sub(r"tunnel\d+\.dlproxy\.uk", "tunnel1.dlproxy.uk", url)
-        # Follow intermediate ankergames page
-        if "ankergames" in url and depth < 2:
-            result = extract_dlproxy_url(session, url, depth + 1)
-            if result:
-                return result
-    return None
+    if re.match(r"https://node\d+\.datanodes\.to", url):
+        return url
+
+    if "dlproxy.uk" in url:
+        return re.sub(r"tunnel\d+\.dlproxy\.uk", "tunnel1.dlproxy.uk", url)
+
+    return url
 
 
 def load_progress() -> dict:
@@ -206,7 +196,7 @@ def save_progress(progress: dict) -> None:
 def save_output(downloads: list) -> None:
     downloads = sorted(downloads, key=lambda d: d.get("uploadDate", ""), reverse=True)
     catalog = {
-        "name": "Ankergames",
+        "name": "AnkerGames",
         "downloads": downloads,
     }
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
@@ -229,10 +219,7 @@ def scrape(args: argparse.Namespace) -> None:
         all_urls = all_urls[: args.limit]
         print(f"[limit] Processing first {args.limit} games")
 
-    downloads = []
-    for entry in progress["completed"].values():
-        downloads.append(entry)
-
+    downloads = list(progress["completed"].values())
     pending = [u for u in all_urls if u not in progress["completed"]]
     print(f"[progress] {len(progress['completed'])} done, {len(pending)} remaining\n")
 
@@ -321,11 +308,10 @@ def scrape(args: argparse.Namespace) -> None:
 
     save_output(downloads)
     if progress["failed"]:
-        print(f"\n[warn] {len(progress['failed'])} games failed: {progress['failed'][:5]}...")
+        print(f"\n[warn] {len(progress['failed'])} games failed.")
 
 
 def fix_urls(args: argparse.Namespace) -> None:
-    """Second-pass: fill in download URLs for games missing external links."""
     progress = load_progress()
     if not progress["completed"]:
         print("[fix] No progress file found. Run the scraper first.")
@@ -393,7 +379,6 @@ def fix_urls(args: argparse.Namespace) -> None:
         time.sleep(DELAY_BETWEEN_GAMES)
 
     print(f"\n[fix] Fixed {fixed}/{len(needs_fix)} games")
-
     downloads = list(progress["completed"].values())
     save_output(downloads)
 
@@ -401,9 +386,9 @@ def fix_urls(args: argparse.Namespace) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description="AnkerGames -> Hydra JSON scraper")
     parser.add_argument("--limit", type=int, default=0, help="Only process first N games")
-    parser.add_argument("--newest", type=int, default=0, help="Only process the N most recently updated games")
+    parser.add_argument("--newest", type=int, default=0, help="Process the N most recently updated games")
     parser.add_argument("--resume", action="store_true", help="Resume interrupted scrape")
-    parser.add_argument("--no-dl", action="store_true", help="Skip download URL generation (metadata only)")
+    parser.add_argument("--no-dl", action="store_true", help="Skip download URL generation")
     parser.add_argument("--fix-urls", action="store_true", help="Second pass: fill in missing download URLs")
     args = parser.parse_args()
 
