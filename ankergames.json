@@ -2,9 +2,41 @@
   "name": "AnkerGames",
   "downloads": [
     {
+      "title": "Far Far West",
+      "uris": [
+        "https://ankergames.net/download-file/10a73896a5147748bff2a5a6a76bcad245e8b2ac2d5562c1"
+      ],
+      "uploadDate": "2026-10-23T00:00:00.000Z",
+      "fileSize": "4.7 GB"
+    },
+    {
+      "title": "Waterpark Simulator",
+      "uris": [
+        "https://ankergames.net/download-file/cd01044005e44fffa31733c5d24fb7b0435c25b5e88ade14"
+      ],
+      "uploadDate": "2026-10-23T00:00:00.000Z",
+      "fileSize": "7 GB"
+    },
+    {
+      "title": "Star Wars Jedi Fallen Order",
+      "uris": [
+        "https://ankergames.net/download-file/b21436ec628a1ff890181b51b2508fc46b22e031d6e86385"
+      ],
+      "uploadDate": "2026-10-23T00:00:00.000Z",
+      "fileSize": "44.7 GB"
+    },
+    {
+      "title": "Towers of Aghasba",
+      "uris": [
+        "https://ankergames.net/download-file/ada532af743840c20319d1877c9a43c424a722ee3abe0ab9"
+      ],
+      "uploadDate": "2026-10-23T00:00:00.000Z",
+      "fileSize": "16.4 GB"
+    },
+    {
       "title": "South Park The Stick of Truth",
       "uris": [
-        "https://ankergames.net/download-file/c73e21509872b493353a29d61f923986c46d61a3b1a58c54"
+        "https://ankergames.net/download-file/6e3fcc23a6c4568e2aa31d763ec200f1eaf9f3745d30ad2d"
       ],
       "uploadDate": "2026-10-23T00:00:00.000Z",
       "fileSize": "4.2 GB"
@@ -12,7 +44,7 @@
     {
       "title": "BeamNG.drive",
       "uris": [
-        "https://ankergames.net/download-file/c089797288990318e1547bc75a2ff18a0f3da1821a032f81"
+        "https://ankergames.net/download-file/24bd04d3fec88a3147041425f4ea2c5f905b036b41676396"
       ],
       "uploadDate": "2026-10-23T00:00:00.000Z",
       "fileSize": "21.8 GB"
@@ -20,7 +52,7 @@
     {
       "title": "STAR WARS Jedi Survivor",
       "uris": [
-        "https://ankergames.net/download-file/a0734e52bf55206353b7769ba3dec1d1cd5ca93d0fcd0e99"
+        "https://ankergames.net/download-file/a37b8321279128fdd9f86a2d88db5074254fb55bec798733"
       ],
       "uploadDate": "2026-10-23T00:00:00.000Z",
       "fileSize": "131.8 GB"
@@ -28,7 +60,7 @@
     {
       "title": "The Evil Within",
       "uris": [
-        "https://ankergames.net/download-file/dd0a1c9b325d22951fa448a7319191902741b1fe2d4c1c24"
+        "https://ankergames.net/download-file/4478846629d3f5dc4b30d1f79553a3dc4b6e236672f4c1c5"
       ],
       "uploadDate": "2026-10-23T00:00:00.000Z",
       "fileSize": "48.5 GB"
@@ -36,7 +68,7 @@
     {
       "title": "Titanfall 2",
       "uris": [
-        "https://ankergames.net/download-file/8e881c7aea23f4749c7089fd319ce2aa8ddd413830f16765"
+        "https://ankergames.net/download-file/e2eb47288510240cb204a45298693169fa0006c905b0b5f1"
       ],
       "uploadDate": "2026-10-23T00:00:00.000Z",
       "fileSize": "43.2 GB"
@@ -44,7 +76,7 @@
     {
       "title": "RuneScape: Dragonwilds",
       "uris": [
-        "https://ankergames.net/download-file/39905f13400067f6e09437a0c78aaaea1854289e924462ca"
+        "https://ankergames.net/download-file/f984294ec571cf94f2d00f12acc57c27255ef9656ba29477"
       ],
       "uploadDate": "2026-10-23T00:00:00.000Z",
       "fileSize": "23.5 GB"
@@ -52,7 +84,7 @@
     {
       "title": "GONE Fishing",
       "uris": [
-        "https://ankergames.net/download-file/440e90fdf4fb20a94f6526133e1909b1456ce70e677c94f4"
+        "https://ankergames.net/download-file/142520d6dec80a6a58d52938f754a785a2892f816e4476fa"
       ],
       "uploadDate": "2026-10-23T00:00:00.000Z",
       "fileSize": "5.2 GB"
@@ -60,7 +92,7 @@
     {
       "title": "Dying Light 2 Stay Human",
       "uris": [
-        "https://ankergames.net/download-file/827b35afcabc18cddb4d1cee5641366b40e482dd914becfb"
+        "https://ankergames.net/download-file/fbc987b1cd2c3c238cfdda3ec615926fee39946bc11953b5"
       ],
       "uploadDate": "2026-10-23T00:00:00.000Z",
       "fileSize": "57.5 GB"
@@ -68,7 +100,7 @@
     {
       "title": "Travellers Rest",
       "uris": [
-        "https://ankergames.net/download-file/3170b57feaaee84004fab5ff3760e19338108e6c0e9dcc7e"
+        "https://ankergames.net/download-file/523b86642731adb3064a0fd175ad7ddb55163a8e8e861979"
       ],
       "uploadDate": "2026-10-23T00:00:00.000Z",
       "fileSize": "0.67 GB"
@@ -76,7 +108,7 @@
     {
       "title": "Forts",
       "uris": [
-        "https://ankergames.net/download-file/52fac9f8d73128d75d1da1593646ea13b49fb3d8230e9ef1"
+        "https://ankergames.net/download-file/a453ca242d2fd93668efd94693fd95a9dc683bfcbe9c5b85"
       ],
       "uploadDate": "2026-10-23T00:00:00.000Z",
       "fileSize": "3 GB"
@@ -84,7 +116,7 @@
     {
       "title": "CarX Drift Racing Online 2",
       "uris": [
-        "https://ankergames.net/download-file/d5f02da127fa7f474250c69ee1c850816ff0fa3ebd069ff6"
+        "https://ankergames.net/download-file/6411fe04c6a84950c78a9b8ab83c642283b0060c9638bbe7"
       ],
       "uploadDate": "2026-10-23T00:00:00.000Z",
       "fileSize": "15.4 GB"
@@ -92,7 +124,7 @@
     {
       "title": "Halls of Torment",
       "uris": [
-        "https://ankergames.net/download-file/e3305bbe87f47258805fa8f68161c13a14715be9438f3017"
+        "https://ankergames.net/download-file/f1ecd1b1cb8907d96e9be541c2d754cfec61c16a785b2b5f"
       ],
       "uploadDate": "2026-10-23T00:00:00.000Z",
       "fileSize": "1 GB"
@@ -100,7 +132,7 @@
     {
       "title": "Ratatan",
       "uris": [
-        "https://ankergames.net/download-file/4aa85494ae266c5492db63de04f1dbf24b77c069650f54bc"
+        "https://ankergames.net/download-file/f501af99be653e2c72874d7dfb0c0deaf19cf266966295b4"
       ],
       "uploadDate": "2026-10-23T00:00:00.000Z",
       "fileSize": "1.5 GB"
@@ -108,7 +140,7 @@
     {
       "title": "Sandustry",
       "uris": [
-        "https://ankergames.net/download-file/b51f509cf91bcfbe19036d0d3520be991d26897e411b608b"
+        "https://ankergames.net/download-file/cde2014c3f2ae2b8d5a961bdcacda41210e5dea975ecdc48"
       ],
       "uploadDate": "2026-10-23T00:00:00.000Z",
       "fileSize": "0.29 GB"
@@ -116,7 +148,7 @@
     {
       "title": "Bloons TD 6",
       "uris": [
-        "https://ankergames.net/download-file/0b071f2495c32f089003acd0adf06a727b048ca254bd8cd0"
+        "https://ankergames.net/download-file/21d88144642cce0d5d5913086ed908bc60799d8aca43a981"
       ],
       "uploadDate": "2026-10-23T00:00:00.000Z",
       "fileSize": "2.2 GB"
@@ -124,7 +156,7 @@
     {
       "title": "The Spell Brigade",
       "uris": [
-        "https://ankergames.net/download-file/1f57a3d14f3f1339286f6fe67b3029398d6cb8760fa0522f"
+        "https://ankergames.net/download-file/21bc10a68dab08f7e151add0a408e2335b5d95c0a2725f01"
       ],
       "uploadDate": "2026-10-23T00:00:00.000Z",
       "fileSize": "1.3 GB"
@@ -132,7 +164,7 @@
     {
       "title": "I Am Your Beast",
       "uris": [
-        "https://ankergames.net/download-file/87573b0fdcf0c0a83a06b6a351b399aa7e8ea2a6d85a07ea"
+        "https://ankergames.net/download-file/7e2c9b424ec29045bf5d03c1bf6d29875611b6a3a79c0b13"
       ],
       "uploadDate": "2026-10-23T00:00:00.000Z",
       "fileSize": "1.66 GB"
@@ -140,7 +172,7 @@
     {
       "title": "Plague Inc Evolved",
       "uris": [
-        "https://ankergames.net/download-file/9ce2f889d77c4cfaae5f38a8ca910494994f4e4ea0d9ac74"
+        "https://ankergames.net/download-file/46e8594e6aa66d3ebde9f473db58f9600b36cf6f7831ba11"
       ],
       "uploadDate": "2026-10-23T00:00:00.000Z",
       "fileSize": "0.7 GB"
@@ -148,7 +180,7 @@
     {
       "title": "Pathogenic",
       "uris": [
-        "https://ankergames.net/download-file/090dd5de38afef711d34783be48532be7cf7545b320c6ad4"
+        "https://ankergames.net/download-file/2fcd35c2302875f1785f1f1497f44c2558b67ddd35a1ae57"
       ],
       "uploadDate": "2026-10-23T00:00:00.000Z",
       "fileSize": "2.1 GB"
@@ -156,7 +188,7 @@
     {
       "title": "The Blood of Dawnwalker",
       "uris": [
-        "https://ankergames.net/download-file/a3c3dd5030bc15126ae6f8a787a0f4f18a81b61729d4c00e"
+        "https://ankergames.net/download-file/568171ea1b489eaa4430a2969cfa480b8df0678ddffbcefd"
       ],
       "uploadDate": "2026-10-23T00:00:00.000Z",
       "fileSize": "49.8 GB"
@@ -164,7 +196,7 @@
     {
       "title": "Demonologist",
       "uris": [
-        "https://ankergames.net/download-file/894a469864e086a262a3dbb2e2121461d5ffece9920ee9b8"
+        "https://ankergames.net/download-file/7f036365b05912cc901b172c78638f030903ff8a4597c8da"
       ],
       "uploadDate": "2026-10-23T00:00:00.000Z",
       "fileSize": "46 GB"
@@ -172,7 +204,7 @@
     {
       "title": "People Playground",
       "uris": [
-        "https://ankergames.net/download-file/3c98e1b4d16bef4566df32eb41471cf4dc7549df7b47a586"
+        "https://ankergames.net/download-file/12730340b92eb87550639455fc9ad02ee64ed3c7845d3c51"
       ],
       "uploadDate": "2026-10-23T00:00:00.000Z",
       "fileSize": "0.13 GB"
@@ -180,7 +212,7 @@
     {
       "title": "Hoop Land",
       "uris": [
-        "https://ankergames.net/download-file/170dfa14d0f7c334e10ea69bebe70aa9cfbd2f7519a67da7"
+        "https://ankergames.net/download-file/175a9c018f52a2baad96ec5dd5bf9a0396e9f6e161afe9e3"
       ],
       "uploadDate": "2026-10-23T00:00:00.000Z",
       "fileSize": "0.09 GB"
@@ -188,7 +220,7 @@
     {
       "title": "Neon Abyss 2",
       "uris": [
-        "https://ankergames.net/download-file/bb3322ab01550afeb0e46e102a27b5fdae138f8a612eeeb1"
+        "https://ankergames.net/download-file/499391452abd74f9f709a89af0efdd3447d5d276cdca1090"
       ],
       "uploadDate": "2026-10-23T00:00:00.000Z",
       "fileSize": "1.4 GB"
@@ -196,7 +228,7 @@
     {
       "title": "Stick It to the Stickman",
       "uris": [
-        "https://ankergames.net/download-file/e9f56c3f5152e0c62480739b3e73d08dec42433a2292ecd4"
+        "https://ankergames.net/download-file/b2ff14da1097e85b6beb9a5913b9b43ef7c14696bb406dda"
       ],
       "uploadDate": "2026-10-23T00:00:00.000Z",
       "fileSize": "1.2 GB"
@@ -204,7 +236,7 @@
     {
       "title": "Don't Starve Together",
       "uris": [
-        "https://ankergames.net/download-file/a6d04bce1a92c797d5380905e51a19dc233d7b9fa110c809"
+        "https://ankergames.net/download-file/032df4c3bb4504a940b0e7786d279e61da2f6ef7e8552134"
       ],
       "uploadDate": "2026-10-23T00:00:00.000Z",
       "fileSize": "3.2 GB"
@@ -212,7 +244,7 @@
     {
       "title": "My Card Is Better Than Your Card!",
       "uris": [
-        "https://ankergames.net/download-file/d0d6c96dd4b03832abfa0a9be77892876dd539f28c6e3255"
+        "https://ankergames.net/download-file/1c5b764430f8b2102aaba34d7acbbadd030c44375028aaba"
       ],
       "uploadDate": "2026-10-23T00:00:00.000Z",
       "fileSize": "0.56 GB"
@@ -220,7 +252,7 @@
     {
       "title": "News Tower",
       "uris": [
-        "https://ankergames.net/download-file/7b7fc9114d0869a31979bd336ebfcb864d43d42c175bb440"
+        "https://ankergames.net/download-file/4ea904d1b028b4e7becc8155073828f76170055ac749e1ce"
       ],
       "uploadDate": "2026-10-23T00:00:00.000Z",
       "fileSize": "0.45 GB"
@@ -228,7 +260,7 @@
     {
       "title": "Turbo Dismount 2",
       "uris": [
-        "https://ankergames.net/download-file/ffd0137296ddd6ced8e5d4faf3aaae39f767a0634811a996"
+        "https://ankergames.net/download-file/e84c9779080270456a4ec0de529d404c172133656af63cf3"
       ],
       "uploadDate": "2026-10-23T00:00:00.000Z",
       "fileSize": "0.73 GB"
@@ -236,7 +268,7 @@
     {
       "title": "City Car Driving 2.0",
       "uris": [
-        "https://ankergames.net/download-file/2e2024cf87a49360af83012cb8905bb51af7c3248088f7ca"
+        "https://ankergames.net/download-file/2a65113390d35b2ea3a2dcf81da6f312db42d03589fa241f"
       ],
       "uploadDate": "2026-10-23T00:00:00.000Z",
       "fileSize": "11.2 GB"
@@ -244,7 +276,7 @@
     {
       "title": "Monster Prom 4: Monster Con",
       "uris": [
-        "https://ankergames.net/download-file/7194edc1194693db9412062be0dbd1088e8df1dd7d6784bf"
+        "https://ankergames.net/download-file/be3cee6e6fac58dd67c99cb8350eaf6e36dec85ea930cadf"
       ],
       "uploadDate": "2026-10-23T00:00:00.000Z",
       "fileSize": "1.1 GB"
@@ -252,7 +284,7 @@
     {
       "title": "HumanitZ",
       "uris": [
-        "https://ankergames.net/download-file/decd1acaf93c727017d180603f5c66720b226b7e3590080a"
+        "https://ankergames.net/download-file/3c33e4b62ee332f67a714cb633d42578ab70354009078504"
       ],
       "uploadDate": "2026-10-23T00:00:00.000Z",
       "fileSize": "21.2 GB"
@@ -260,7 +292,7 @@
     {
       "title": "Rust",
       "uris": [
-        "https://ankergames.net/download-file/4933ffea5818748b867c7cb38d17d790e84c2a67fbc2daf5"
+        "https://ankergames.net/download-file/a0d4e37ee940dd511c26bc14a9b0fc56e3919047774ec206"
       ],
       "uploadDate": "2026-10-23T00:00:00.000Z",
       "fileSize": "32.7 GB"
@@ -268,7 +300,7 @@
     {
       "title": "Megastore Simulator",
       "uris": [
-        "https://ankergames.net/download-file/f2d6127fd247f57a6d8afb8a60198c577864709daadbc9a4"
+        "https://ankergames.net/download-file/def94851f775ff4e6e436591b805a342fe7e6b1d3ed070e0"
       ],
       "uploadDate": "2026-10-23T00:00:00.000Z",
       "fileSize": "3.1 GB"
@@ -276,7 +308,7 @@
     {
       "title": "In Falsus",
       "uris": [
-        "https://ankergames.net/download-file/6e0141128408626d98042d4b07ccd01b923e03f354f8e5f6"
+        "https://ankergames.net/download-file/f6c36b9d68af6793dfb0161faf8d1103713243a31caa7bd7"
       ],
       "uploadDate": "2026-10-23T00:00:00.000Z",
       "fileSize": "6.1 GB"
@@ -284,7 +316,7 @@
     {
       "title": "Soulmask",
       "uris": [
-        "https://ankergames.net/download-file/66e9fb1099cef10dae727bab60799d90df567e48fa923e1f"
+        "https://ankergames.net/download-file/289c99614a88b9cb34bb688e494a49289bd887d9e33de209"
       ],
       "uploadDate": "2026-10-23T00:00:00.000Z",
       "fileSize": "21.6 GB"
@@ -292,7 +324,7 @@
     {
       "title": "FATAL FURY: City of the Wolves",
       "uris": [
-        "https://ankergames.net/download-file/c778a984212f5b15177eb4c03eaf954207cff02d29ea4be8"
+        "https://ankergames.net/download-file/4872a5588a3cdb27604e5b42d40dd1883d6256ce6c4138dd"
       ],
       "uploadDate": "2026-10-22T00:00:00.000Z",
       "fileSize": "33.6 GB"
@@ -300,7 +332,7 @@
     {
       "title": "Cyberpunk 2077",
       "uris": [
-        "https://ankergames.net/download-file/65fc89c681a3b74f754abfc96b071729e923ec5d469d56d5"
+        "https://ankergames.net/download-file/a6af843ff07ef5769b830e8274e5dcf949549751b949949a"
       ],
       "uploadDate": "2026-10-22T00:00:00.000Z",
       "fileSize": "72.5 GB"
@@ -308,7 +340,7 @@
     {
       "title": "Into the Radius 2",
       "uris": [
-        "https://ankergames.net/download-file/113644dca366804ea29032f4c04203015b5a2d573599bb76"
+        "https://ankergames.net/download-file/dafcdcab3ce00c61bfe5b3c0aad51e35b47b66b60d801b72"
       ],
       "uploadDate": "2026-10-22T00:00:00.000Z",
       "fileSize": "16.8 GB"
@@ -316,7 +348,7 @@
     {
       "title": "High On Life 2",
       "uris": [
-        "https://ankergames.net/download-file/e2a6f5d0a261bbeca0d43f0f0cfc0dfa0aaae74682408fba"
+        "https://ankergames.net/download-file/304aed9f4947c062c70e643f2bce961708d8e14979c8ccfc"
       ],
       "uploadDate": "2026-10-22T00:00:00.000Z",
       "fileSize": "83.5 GB"
@@ -324,7 +356,7 @@
     {
       "title": "Broken Arrow",
       "uris": [
-        "https://ankergames.net/download-file/f00239e4129d0483019f75e5b9a95250c3992a8598bf1f1d"
+        "https://ankergames.net/download-file/08a55bd07d813d60624ff69459a077a7b23d9be12985ed20"
       ],
       "uploadDate": "2026-10-22T00:00:00.000Z",
       "fileSize": "51.6 GB"
@@ -332,7 +364,7 @@
     {
       "title": "Enotria The Last Song",
       "uris": [
-        "https://ankergames.net/download-file/1e1402387916f1ad906b7a35464cc8b9a47d06e79d048f5a"
+        "https://ankergames.net/download-file/8985431b1641d066023926e2b026cc5e3c8f0c11492f46c8"
       ],
       "uploadDate": "2026-10-22T00:00:00.000Z",
       "fileSize": "12.8 GB"
@@ -340,7 +372,7 @@
     {
       "title": "Sea Power : Naval Combat in the Missile Age",
       "uris": [
-        "https://ankergames.net/download-file/5927006ab1aa02e0a365327da44dfcfc96e2f477090fbe1b"
+        "https://ankergames.net/download-file/92cc122168139ff01d28cbdd0931c1b41c243d6e41712f29"
       ],
       "uploadDate": "2026-10-22T00:00:00.000Z",
       "fileSize": "9.7 GB"
@@ -348,7 +380,7 @@
     {
       "title": "Cataclismo",
       "uris": [
-        "https://ankergames.net/download-file/2d4e55184fbb1aa93d2df5a368512d6a421b9ff4385ab266"
+        "https://ankergames.net/download-file/bdc1a726bdf3becde029df2dffb8c6a9bdd7a4d9a6b0fff2"
       ],
       "uploadDate": "2026-10-22T00:00:00.000Z",
       "fileSize": "3.5 GB"
@@ -356,7 +388,7 @@
     {
       "title": "Infection Free Zone",
       "uris": [
-        "https://ankergames.net/download-file/524460e0e2a942a7fbf48c666b297560559aebae6cc9d80c"
+        "https://ankergames.net/download-file/75af9a47faf43d36ed071ed8ab6e14cc362332017fd417f5"
       ],
       "uploadDate": "2026-10-22T00:00:00.000Z",
       "fileSize": "4.5 GB"
@@ -364,7 +396,7 @@
     {
       "title": "Farlands",
       "uris": [
-        "https://ankergames.net/download-file/b7ff25c02f2ab8c42dc9e723e511fb0355733e863c415421"
+        "https://ankergames.net/download-file/f4715fb1240491941b3a661cba0cad614bc4771951a29b48"
       ],
       "uploadDate": "2026-10-22T00:00:00.000Z",
       "fileSize": "0.25 GB"
@@ -372,7 +404,7 @@
     {
       "title": "Wicked Seed",
       "uris": [
-        "https://ankergames.net/download-file/7559b4260e237c2011a8912251c8f9767753218c4f832092"
+        "https://ankergames.net/download-file/4fb90c725c675824f8ee4580635254ee7feb0bf34b91dbfd"
       ],
       "uploadDate": "2026-10-22T00:00:00.000Z",
       "fileSize": "13.78 GB"
@@ -380,7 +412,7 @@
     {
       "title": "Backyard Baseball",
       "uris": [
-        "https://ankergames.net/download-file/23b030898b2908077c9457d8ca4f01e9c92468653137bcc5"
+        "https://ankergames.net/download-file/62955e91cd9b3d50f42c37d04d18fb2db049e278b8aaa6d7"
       ],
       "uploadDate": "2026-10-22T00:00:00.000Z",
       "fileSize": "4.9 GB"
@@ -388,7 +420,7 @@
     {
       "title": "Hollywood Animal",
       "uris": [
-        "https://ankergames.net/download-file/4c01ce0d84522f5cd8e0e831326ac679b464896576ae6843"
+        "https://ankergames.net/download-file/f1f477e76ee4b73b8acb79f284edb6f52ccff5533a56a39c"
       ],
       "uploadDate": "2026-10-22T00:00:00.000Z",
       "fileSize": "1.8 GB"
@@ -396,7 +428,7 @@
     {
       "title": "Lootborne",
       "uris": [
-        "https://ankergames.net/download-file/2ca37247f4c05484946976b6716c50288c514a22f3fda437"
+        "https://ankergames.net/download-file/40ddc5d7dca79c33892ab4372b3e39f85fd86ac38949c3d8"
       ],
       "uploadDate": "2026-10-22T00:00:00.000Z",
       "fileSize": "0.09 GB"
@@ -404,7 +436,7 @@
     {
       "title": "The Farmer Was Replaced",
       "uris": [
-        "https://ankergames.net/download-file/c5b1198caeee4e30df5381bcb7f7d755b5abc123058cd943"
+        "https://ankergames.net/download-file/413e8f4004ec33ffce40a10c6fd53adcfefaeee2bd39417a"
       ],
       "uploadDate": "2026-10-22T00:00:00.000Z",
       "fileSize": "0.1 GB"
@@ -412,7 +444,7 @@
     {
       "title": "SOMA",
       "uris": [
-        "https://ankergames.net/download-file/a2117f5bf3ef99bed927f59705a7a86623559311296a54c1"
+        "https://ankergames.net/download-file/bd4d1de60bc82a17739702cfc965ebcd65c9fd52d970cd70"
       ],
       "uploadDate": "2026-10-22T00:00:00.000Z",
       "fileSize": "10.1 GB"
@@ -420,7 +452,7 @@
     {
       "title": "Lay of the Land",
       "uris": [
-        "https://ankergames.net/download-file/878b24abab84d5fb05708bff17c62bacbe9b720dbe6f23de"
+        "https://ankergames.net/download-file/f921cf5dc963be6873852b7e121a35a28479fc0975742fa8"
       ],
       "uploadDate": "2026-10-22T00:00:00.000Z",
       "fileSize": "1.3 GB"
@@ -428,7 +460,7 @@
     {
       "title": "Uncrashed : FPV Drone Simulator",
       "uris": [
-        "https://ankergames.net/download-file/2eaf95e61431daf41e889721d4bd74e7ac2dc534699588d4"
+        "https://ankergames.net/download-file/148c3a75f523341690deb9062815522f7f09dc9138040c9b"
       ],
       "uploadDate": "2026-10-22T00:00:00.000Z",
       "fileSize": "17.9 GB"
@@ -436,7 +468,7 @@
     {
       "title": "Twisted Tower",
       "uris": [
-        "https://ankergames.net/download-file/12d53b1b84537fc5bf40c215c59b46f9eec4f50c4f8bc0be"
+        "https://ankergames.net/download-file/c8abdb5a2d800f55904a463aa94a95a9b3ef9a0e833f16e7"
       ],
       "uploadDate": "2026-10-22T00:00:00.000Z",
       "fileSize": "3.2 GB"
@@ -444,7 +476,7 @@
     {
       "title": "Magicraft",
       "uris": [
-        "https://ankergames.net/download-file/55535232090157daa72f42e13110f435a8bbff0dee8a7893"
+        "https://ankergames.net/download-file/167d0bf94ea8ce236a02d49ba7681388944623a4c102100e"
       ],
       "uploadDate": "2026-10-22T00:00:00.000Z",
       "fileSize": "0.7 GB"
@@ -452,7 +484,7 @@
     {
       "title": "Police Chief Simulator",
       "uris": [
-        "https://ankergames.net/download-file/83f2ba29d9c02c14bdfa093d18ca2073d196f647f3369c86"
+        "https://ankergames.net/download-file/f45e8c141d3b7c29adacad759cf2899e2bf4cd2a6fdb74d7"
       ],
       "uploadDate": "2026-10-22T00:00:00.000Z",
       "fileSize": "15.7 GB"
@@ -460,7 +492,7 @@
     {
       "title": "Honeycomb: The World Beyond",
       "uris": [
-        "https://ankergames.net/download-file/99903d8ea6afdc42f463252a63bc4757e02cee12c2e5f06b"
+        "https://ankergames.net/download-file/89bdb722a11581f0c96757731b81b3572c540f0df12784d3"
       ],
       "uploadDate": "2026-10-22T00:00:00.000Z",
       "fileSize": "6.4 GB"
@@ -468,7 +500,7 @@
     {
       "title": "Boba Cafe Simulator",
       "uris": [
-        "https://ankergames.net/download-file/0604168dea8a9b63b34f34a7f87bd4abc93eb690aa631180"
+        "https://ankergames.net/download-file/f81fb1974e5b45a3cd44f18a7d76c0e068bfa17d3867679f"
       ],
       "uploadDate": "2026-10-22T00:00:00.000Z",
       "fileSize": "2.7 GB"
@@ -476,7 +508,7 @@
     {
       "title": "Crusader Kings III",
       "uris": [
-        "https://ankergames.net/download-file/ce9eb76fb7f1097f89c8104c4156c1b0fb1d32f07b42033d"
+        "https://ankergames.net/download-file/187679c2e771ca7902f3c34df314a58b0b668b5c3b53efc9"
       ],
       "uploadDate": "2026-10-22T00:00:00.000Z",
       "fileSize": "9.3 GB"
@@ -484,7 +516,7 @@
     {
       "title": "ENDLESS Legend 2",
       "uris": [
-        "https://ankergames.net/download-file/ff2b6b7edda771d91a147a40b3807fe9427f0326a8d2a0eb"
+        "https://ankergames.net/download-file/a037770bbf2ec1969ae0544f888a3b6b2f3346cec3dffc0c"
       ],
       "uploadDate": "2026-10-22T00:00:00.000Z",
       "fileSize": "12.4 GB"
@@ -492,7 +524,7 @@
     {
       "title": "Tiny Eden",
       "uris": [
-        "https://ankergames.net/download-file/c91b525967e2d3fae1eff154bc479b71c28d241e4ae4ea8c"
+        "https://ankergames.net/download-file/117432bb04022c04943a6bc5be09dec4cf26275ce64dcdeb"
       ],
       "uploadDate": "2026-10-22T00:00:00.000Z",
       "fileSize": "3.1 GB"
@@ -500,7 +532,7 @@
     {
       "title": "The King is Watching",
       "uris": [
-        "https://ankergames.net/download-file/21aec899c9a11a2f37880b6cc3066fc2f7e17750b4b61679"
+        "https://ankergames.net/download-file/92ef71f0d536a4d8dd92e0c85dddebe5de22cf7da659ca6d"
       ],
       "uploadDate": "2026-10-22T00:00:00.000Z",
       "fileSize": "0.73 GB"
@@ -508,7 +540,7 @@
     {
       "title": "Ultra Street Fighter IV",
       "uris": [
-        "https://ankergames.net/download-file/bc0ef990e32a451508fdc0201ffe162784ca04d5f058392e"
+        "https://ankergames.net/download-file/3d938e093cf5e268a7dd5725f9b8d8187897d3cccba22a1a"
       ],
       "uploadDate": "2026-10-22T00:00:00.000Z",
       "fileSize": "10.6 GB"
@@ -516,7 +548,7 @@
     {
       "title": "He is Coming",
       "uris": [
-        "https://ankergames.net/download-file/ff069aa0b61711883ed603286e456b784e9fd1811d851482"
+        "https://ankergames.net/download-file/e8ce57292ff7640f34a6d8d1c91bc35591bf478cfe18be26"
       ],
       "uploadDate": "2026-10-22T00:00:00.000Z",
       "fileSize": "0.14 GB"
@@ -524,7 +556,7 @@
     {
       "title": "Little Witch in the Woods",
       "uris": [
-        "https://ankergames.net/download-file/b939402d3fea32bbb04bffa7cd8eebf3a71b75293d942eff"
+        "https://ankergames.net/download-file/044f7479d7a67de9e10f9dcd7a853772e1d37e46f691d74a"
       ],
       "uploadDate": "2026-10-22T00:00:00.000Z",
       "fileSize": "0.57 GB"
@@ -532,7 +564,7 @@
     {
       "title": "KOTAMON: My Sis Found A Super-Rare Card In Her Cereal Box, So I Became A Garbage Man To Find The Entire Collection And Earn $1,000,000",
       "uris": [
-        "https://ankergames.net/download-file/e6e131362129a289c84eda8ce5072b946af22ea1df690f1d"
+        "https://ankergames.net/download-file/5e99ee377f449278ade2602a518e3b72cb20b4c5e7c8f531"
       ],
       "uploadDate": "2026-10-22T00:00:00.000Z",
       "fileSize": "0.83 GB"
@@ -540,7 +572,7 @@
     {
       "title": "Risk of Rain 2",
       "uris": [
-        "https://ankergames.net/download-file/d42a7f5623213b050517062fdaed323b60b893981886764e"
+        "https://ankergames.net/download-file/c1c3bd48cf33b92fc0d84d140d762fd64a84bf83143ea521"
       ],
       "uploadDate": "2026-10-22T00:00:00.000Z",
       "fileSize": "3.4 GB"
@@ -548,7 +580,7 @@
     {
       "title": "Warhammer 40,000: Space Marine 2",
       "uris": [
-        "https://ankergames.net/download-file/158a9aa0e8892e001a5ec30e6a7457cdffcff67bd5c64ba6"
+        "https://ankergames.net/download-file/3e8c85bb5f8de6d59b3ed5e989ceb32dca3cada40f403447"
       ],
       "uploadDate": "2026-10-21T00:00:00.000Z",
       "fileSize": "80 GB"
@@ -556,7 +588,7 @@
     {
       "title": "Enshrouded",
       "uris": [
-        "https://ankergames.net/download-file/2fee7edbe2cbbbfe2e4678a8355720a9ce6a220e3cc48735"
+        "https://ankergames.net/download-file/2801f2ee5450e7d35df5ee2cc08ba8d5c4b901490861c2f0"
       ],
       "uploadDate": "2026-10-21T00:00:00.000Z",
       "fileSize": "30.1 GB"
@@ -564,7 +596,7 @@
     {
       "title": "inZOI",
       "uris": [
-        "https://ankergames.net/download-file/c02d921cb8649d0d80e894375810f8e524587c172b38c740"
+        "https://ankergames.net/download-file/7ebb218d8102bc0e870a915e0be5b9d5bf8becb8d1219323"
       ],
       "uploadDate": "2026-10-21T00:00:00.000Z",
       "fileSize": "35.3 GB"
@@ -572,7 +604,7 @@
     {
       "title": "Europa Universalis V",
       "uris": [
-        "https://ankergames.net/download-file/5365f03252ff9745510316c854dbda363b9b71a92cd57fbe"
+        "https://ankergames.net/download-file/578f1569ad74737f4f10f23563ced50e3af71220c25a7ef4"
       ],
       "uploadDate": "2026-10-21T00:00:00.000Z",
       "fileSize": "6.6 GB"
@@ -580,7 +612,7 @@
     {
       "title": "INAZUMA ELEVEN: Victory Road",
       "uris": [
-        "https://ankergames.net/download-file/745f23b06f3ead415ba592a53881a1e0bfd41f872cbb24b0"
+        "https://ankergames.net/download-file/68ec5b80b3c77834a793af3fd9aff98e373e2bc477bd090e"
       ],
       "uploadDate": "2026-10-21T00:00:00.000Z",
       "fileSize": "57.4 GB"
@@ -588,7 +620,7 @@
     {
       "title": "RimWorld",
       "uris": [
-        "https://ankergames.net/download-file/5a847b672549e51344a1f1a778cb178d69bb88e2d137c4d9"
+        "https://ankergames.net/download-file/49ec1d0adc53c239653f8c0fc00173cef3afd796aaf18169"
       ],
       "uploadDate": "2026-10-21T00:00:00.000Z",
       "fileSize": "0.81 GB"
@@ -596,7 +628,7 @@
     {
       "title": "Crab Champions",
       "uris": [
-        "https://ankergames.net/download-file/002da26b19facd76aef78e970bd198e97b22b14a09bb566b"
+        "https://ankergames.net/download-file/ab82464cf378c9fa632db4695fb1399ecd9b541bc2761c22"
       ],
       "uploadDate": "2026-10-21T00:00:00.000Z",
       "fileSize": "1.3 GB"
@@ -604,7 +636,7 @@
     {
       "title": "Solasta II",
       "uris": [
-        "https://ankergames.net/download-file/1f4f1d87a79c5d1795804210cf54ea7f382ee0ff40419e1a"
+        "https://ankergames.net/download-file/ae9d4175fd60e4e3cef24ad31b4faf5403f2b84d9377356e"
       ],
       "uploadDate": "2026-10-21T00:00:00.000Z",
       "fileSize": "30.06 GB"
@@ -612,7 +644,7 @@
     {
       "title": "Red Dead Redemption 2",
       "uris": [
-        "https://ankergames.net/download-file/412e1b45b49f4efe558d678bf0004b5b57c7aac39921489e"
+        "https://ankergames.net/download-file/04d720ebc0426dfa92fec606fe88ea09c1970cecdf5d6b9f"
       ],
       "uploadDate": "2026-10-21T00:00:00.000Z",
       "fileSize": "115.4 GB"
@@ -620,7 +652,7 @@
     {
       "title": "Yet Another Zombie Survivors",
       "uris": [
-        "https://ankergames.net/download-file/371b9d00f5d0391773d47642060aa2476bf530a737a18d2f"
+        "https://ankergames.net/download-file/4dce741c4d6ff913a62ae7c7135a52fbd305c673c1c95a8f"
       ],
       "uploadDate": "2026-10-21T00:00:00.000Z",
       "fileSize": "4.58 GB"
@@ -628,7 +660,7 @@
     {
       "title": "CATO Buttered Cat",
       "uris": [
-        "https://ankergames.net/download-file/a2ff0404623b0a7871e6ef0b750cfd3b5e510149b19f56f7"
+        "https://ankergames.net/download-file/7c1d814861f9c3648a7560c8de7628b2e4f22e55bf0c34e4"
       ],
       "uploadDate": "2026-10-21T00:00:00.000Z",
       "fileSize": "0.33 GB"
@@ -636,7 +668,7 @@
     {
       "title": "Forever Skies",
       "uris": [
-        "https://ankergames.net/download-file/26aa863b732d88efe869560847620d06cebe337c96733e8d"
+        "https://ankergames.net/download-file/d6a394027728e571db99fe7c0b9e8e0238dc80c2acceb3c6"
       ],
       "uploadDate": "2026-10-21T00:00:00.000Z",
       "fileSize": "11.83 GB"
@@ -644,7 +676,7 @@
     {
       "title": "Car Dealer Simulator",
       "uris": [
-        "https://ankergames.net/download-file/1faed5a47421f7ecfeb229e5434424b12a6ce7eec4fc0300"
+        "https://ankergames.net/download-file/a7963cb5f0fcbbab554dab2cde143d88c6a097b7ebf3bd68"
       ],
       "uploadDate": "2026-10-21T00:00:00.000Z",
       "fileSize": "19.18 GB"
@@ -652,7 +684,7 @@
     {
       "title": "Survival Log",
       "uris": [
-        "https://ankergames.net/download-file/0ac540ac243eaf24599a779d7d6f4532bf692d2379c0ed7c"
+        "https://ankergames.net/download-file/654021bfed0fd02b79c8408fef97d3c02f3ae8d5939f186f"
       ],
       "uploadDate": "2026-10-21T00:00:00.000Z",
       "fileSize": "4.6 GB"
@@ -660,7 +692,7 @@
     {
       "title": "Sex-Pop Demon Hunters",
       "uris": [
-        "https://ankergames.net/download-file/cbf9e7e6bc21e9950ef4243f846106214ecd645418d06e06"
+        "https://ankergames.net/download-file/032a1cd1815f71e49caca98b85e217bc341d08630dfea90c"
       ],
       "uploadDate": "2026-10-21T00:00:00.000Z",
       "fileSize": "8.2 GB"
@@ -668,7 +700,7 @@
     {
       "title": "Farming Simulator 25",
       "uris": [
-        "https://ankergames.net/download-file/8d2fcd7c22357c414b17c6c9fc952510ff1b8c9f040a0479"
+        "https://ankergames.net/download-file/abfae1510bae01066bd93d86b77809d8153a4c6a286b6598"
       ],
       "uploadDate": "2026-10-21T00:00:00.000Z",
       "fileSize": "35.3 GB"
@@ -676,7 +708,7 @@
     {
       "title": "Tavern Keeper",
       "uris": [
-        "https://ankergames.net/download-file/9e0d06834b0d8260a88536e2ac61d7217885574bb38b538e"
+        "https://ankergames.net/download-file/9739ef90f5a1b0e8ddc953a351fe3f8cf296d3361356dbd5"
       ],
       "uploadDate": "2026-10-21T00:00:00.000Z",
       "fileSize": "4.38 GB"
@@ -684,7 +716,7 @@
     {
       "title": "ALL WILL FALL",
       "uris": [
-        "https://ankergames.net/download-file/90d7f95bf9af5e74272a6e0ff793bc6a580cfe56e16080a5"
+        "https://ankergames.net/download-file/72e8b1bc9e921ed4a4cc8854c8836fbf026f2329c9c50df5"
       ],
       "uploadDate": "2026-10-21T00:00:00.000Z",
       "fileSize": "2.07 GB"
@@ -692,7 +724,7 @@
     {
       "title": "Quarantine Zone: The Last Check",
       "uris": [
-        "https://ankergames.net/download-file/3bd8f8faaaa60954a22726b86ed9618dca46dbe8887f79c2"
+        "https://ankergames.net/download-file/a25220c063c9d98ec0d497322daec4cd5c31e82055cac28c"
       ],
       "uploadDate": "2026-10-21T00:00:00.000Z",
       "fileSize": "16.29 GB"
@@ -700,7 +732,7 @@
     {
       "title": "Grounded 2",
       "uris": [
-        "https://ankergames.net/download-file/56471824fe616734f8e031c6330ac1cf9481b9163c71149d"
+        "https://ankergames.net/download-file/e9f0d0111e289457b62169e443172d64ab1c00c3f561a0dc"
       ],
       "uploadDate": "2026-10-21T00:00:00.000Z",
       "fileSize": "18.9 GB"
@@ -708,7 +740,7 @@
     {
       "title": "Timberborn",
       "uris": [
-        "https://ankergames.net/download-file/eccf9891eac1bc51df4a1584bbbd9691e25b878ee0e0ea3d"
+        "https://ankergames.net/download-file/cf6ca725e9f13f1692c817500eda9d2834ab18beedb19367"
       ],
       "uploadDate": "2026-10-21T00:00:00.000Z",
       "fileSize": "1.36 GB"
@@ -716,7 +748,7 @@
     {
       "title": "Good Pizza Great Pizza",
       "uris": [
-        "https://ankergames.net/download-file/a227ecfead5d740828c15c45cbf0b186e0a9d6bc461fdbce"
+        "https://ankergames.net/download-file/b7fac40095dda2a213274344a44e44e23d79a83b41291da2"
       ],
       "uploadDate": "2026-10-21T00:00:00.000Z",
       "fileSize": "1.39 GB"
@@ -724,7 +756,7 @@
     {
       "title": "Mortal Shell II",
       "uris": [
-        "https://ankergames.net/download-file/e333f1d114606fd5bb7fcb10c9066ee3c284b0f7fca8c279"
+        "https://ankergames.net/download-file/46d396dcdd94c8e59bd2b2750865cc0c47eaa6ce2a8579f3"
       ],
       "uploadDate": "2026-10-21T00:00:00.000Z",
       "fileSize": "67.6 GB"
@@ -732,7 +764,7 @@
     {
       "title": "Dune: Awakening",
       "uris": [
-        "https://ankergames.net/download-file/afa45aaa0ff9e503d414cc6ec5132a34a6653da3cca5a260"
+        "https://ankergames.net/download-file/8b81a2cf18fdb68b0cdf1a10d7f05f9c259446b4cf1ce9d3"
       ],
       "uploadDate": "2026-10-21T00:00:00.000Z",
       "fileSize": "35.2 GB"
@@ -740,7 +772,7 @@
     {
       "title": "Crime Scene Cleaner",
       "uris": [
-        "https://ankergames.net/download-file/c0b0303a12648241c13356c87f846bd5f336847226758503"
+        "https://ankergames.net/download-file/14bf9f15865ab8f4200e9b4a11faf8c0646a2c8c94a0fa78"
       ],
       "uploadDate": "2026-10-21T00:00:00.000Z",
       "fileSize": "25.83 GB"
@@ -748,7 +780,7 @@
     {
       "title": "Bookshop Simulator",
       "uris": [
-        "https://ankergames.net/download-file/20b31d7429ec11c654a78b93d88cbae9aa27927a2a63135a"
+        "https://ankergames.net/download-file/69f38b83af174ba20df4e6f2606dc1a9b4c345b08de2fc82"
       ],
       "uploadDate": "2026-10-21T00:00:00.000Z",
       "fileSize": "2.62 GB"
@@ -756,7 +788,7 @@
     {
       "title": "Solar Expanse - Space Exploration Manager",
       "uris": [
-        "https://ankergames.net/download-file/4b70ed47a850e9ba440516c768518a1c5e9922112a4f9f8b"
+        "https://ankergames.net/download-file/e352f4c798b7edc876a263ac3e940ffe97e7ca3c02d3078a"
       ],
       "uploadDate": "2026-10-21T00:00:00.000Z",
       "fileSize": "1.65 GB"
@@ -764,7 +796,7 @@
     {
       "title": "RoboCop: Rogue City - Unfinished Business",
       "uris": [
-        "https://ankergames.net/download-file/1e6581450c05f86328b26450077da0b373dd692dd2d720b5"
+        "https://ankergames.net/download-file/61093b61be1127e091582d39181c6593625ebfcd716e7455"
       ],
       "uploadDate": "2026-10-21T00:00:00.000Z",
       "fileSize": "34 GB"
@@ -772,7 +804,7 @@
     {
       "title": "Elden Ring",
       "uris": [
-        "https://ankergames.net/download-file/dcf45911fbb082947c065ca18bfccb33219531c28b45b0c6"
+        "https://ankergames.net/download-file/f2aebe325e43e7748eb071b7b677cdee17f05b68df6b7fa5"
       ],
       "uploadDate": "2026-10-21T00:00:00.000Z",
       "fileSize": "64.91 GB"
@@ -780,7 +812,7 @@
     {
       "title": "Snowrunner",
       "uris": [
-        "https://ankergames.net/download-file/406c326f8fe3e39412f9afad0a994172ccc8d4060bf5b139"
+        "https://ankergames.net/download-file/8d4fd63007602940f5a0dbd9e01cefb44b81402cf04d451b"
       ],
       "uploadDate": "2026-10-21T00:00:00.000Z",
       "fileSize": "57.6 GB"
@@ -788,7 +820,7 @@
     {
       "title": "Insurgency: Sandstorm",
       "uris": [
-        "https://ankergames.net/download-file/44a150488303b834d5e5defc757fd2e79d565c7ec06c0b1d"
+        "https://ankergames.net/download-file/9b2fe85de5411e333d8d3c28de891440cca6f8db0b9197c2"
       ],
       "uploadDate": "2026-10-20T00:00:00.000Z",
       "fileSize": "35.1 GB"
@@ -796,7 +828,7 @@
     {
       "title": "Cast n Chill",
       "uris": [
-        "https://ankergames.net/download-file/1fc4ebea4599a19d2d750b93edf06c971ea1aa67a60c93e1"
+        "https://ankergames.net/download-file/c463d670fdf57f293433293c945b36ebd311d0c9dd95d606"
       ],
       "uploadDate": "2026-10-20T00:00:00.000Z",
       "fileSize": "0.33 GB"
@@ -804,7 +836,7 @@
     {
       "title": "Subliminal",
       "uris": [
-        "https://ankergames.net/download-file/a69f85f46502eae0c8f0760070c0a7d5e89618bae3e9f300"
+        "https://ankergames.net/download-file/dce3e5ddb1b8bf50085109caa1c6a9c3e980f2ede0dfa136"
       ],
       "uploadDate": "2026-10-20T00:00:00.000Z",
       "fileSize": "16.6 GB"
@@ -812,7 +844,7 @@
     {
       "title": "Chop Chop Inc.",
       "uris": [
-        "https://ankergames.net/download-file/3014e30fc029f54870257fa3bd07aa0934afac449823ab35"
+        "https://ankergames.net/download-file/bc3f22d2266f0022ff8a27872ec3fdc70deba5bbf20267ae"
       ],
       "uploadDate": "2026-10-20T00:00:00.000Z",
       "fileSize": "1.5 GB"
@@ -820,7 +852,7 @@
     {
       "title": "Asgard's Fall Viking Survivors",
       "uris": [
-        "https://ankergames.net/download-file/b25910b282df48dd78f54b2f89a985708052dbb8eebdd5ab"
+        "https://ankergames.net/download-file/788a1da361a636c98a377725875133e45e6c5c22c0e8cd16"
       ],
       "uploadDate": "2026-10-20T00:00:00.000Z",
       "fileSize": "0.22 GB"
@@ -828,7 +860,7 @@
     {
       "title": "Drive Beyond Horizons",
       "uris": [
-        "https://ankergames.net/download-file/29743def0b726d0c0dcf463257d4ef3f9385d9be95744c13"
+        "https://ankergames.net/download-file/b72e8997992503d6a98ad296a0adc9921e2affe272648d54"
       ],
       "uploadDate": "2026-10-20T00:00:00.000Z",
       "fileSize": "17.5 GB"
@@ -836,7 +868,7 @@
     {
       "title": "Directive 8020",
       "uris": [
-        "https://ankergames.net/download-file/4271ec68cd6835fdb1157b7133436e065f35cb88829ab248"
+        "https://ankergames.net/download-file/c5a9abe36fff0b1510d75d6e69bc84c66bf66ab2c9fbd455"
       ],
       "uploadDate": "2026-10-20T00:00:00.000Z",
       "fileSize": "34.6 GB"
@@ -844,7 +876,7 @@
     {
       "title": "Whisper of the House",
       "uris": [
-        "https://ankergames.net/download-file/49f8a1726247600b83c9acdaf1fb288ac3b15780e57502a2"
+        "https://ankergames.net/download-file/28712070d59901bffae20b84ed0338b3f6069003ca5eebd7"
       ],
       "uploadDate": "2026-10-20T00:00:00.000Z",
       "fileSize": "1.12 GB"
@@ -852,7 +884,7 @@
     {
       "title": "Fish to Dish: Idle Sushi",
       "uris": [
-        "https://ankergames.net/download-file/f9d56753f3e450264f02e3002d0f1fce619fd2fa508d2360"
+        "https://ankergames.net/download-file/95b1d2170999932666cb44447363198f4b91e5b3e4c2b7d4"
       ],
       "uploadDate": "2026-10-20T00:00:00.000Z",
       "fileSize": "0.08 GB"
@@ -860,7 +892,7 @@
     {
       "title": "Super Meat Boy 3D",
       "uris": [
-        "https://ankergames.net/download-file/1522c6c5f4f3688432ec03daec2fe571feef932747f81c1a"
+        "https://ankergames.net/download-file/d18f3bad4a0039cb9f080e34171c56ad882094e887e2cc0c"
       ],
       "uploadDate": "2026-10-20T00:00:00.000Z",
       "fileSize": "3.24 GB"
@@ -868,7 +900,7 @@
     {
       "title": "GERONIMO",
       "uris": [
-        "https://ankergames.net/download-file/6929ee4b3d1e2427f5d0a4a73784b8d6aa6f30e1f3e6e573"
+        "https://ankergames.net/download-file/0186c4cbadba59f323940a4c45d7779017ff1d7baf91a8d8"
       ],
       "uploadDate": "2026-10-20T00:00:00.000Z",
       "fileSize": "27.3 GB"
@@ -876,7 +908,7 @@
     {
       "title": "Bendy and the Dark Revival",
       "uris": [
-        "https://ankergames.net/download-file/79c47454f28b594edc8ae3a06f88f97e69219af2300e51eb"
+        "https://ankergames.net/download-file/3ad26caa3ae32cc43c809697bda819ca0efdde5bb15c1def"
       ],
       "uploadDate": "2026-10-20T00:00:00.000Z",
       "fileSize": "4.5 GB"
@@ -884,7 +916,7 @@
     {
       "title": "Serious Sam: Shatterverse",
       "uris": [
-        "https://ankergames.net/download-file/2894be8c1bde975f767105f931fd5fe27ca455b305e3d9d8"
+        "https://ankergames.net/download-file/47a2f2cb6b4512333f066b6f18e7c362c9a4605aadf0d8e5"
       ],
       "uploadDate": "2026-10-20T00:00:00.000Z",
       "fileSize": "7.14 GB"
@@ -892,7 +924,7 @@
     {
       "title": "The Last Caretaker",
       "uris": [
-        "https://ankergames.net/download-file/e073fe45e487bee9d27dd08dfedeeea30f39d9bbbb069544"
+        "https://ankergames.net/download-file/348a13217a6a205e3ccff11987d947b100112a55efa65fd5"
       ],
       "uploadDate": "2026-10-20T00:00:00.000Z",
       "fileSize": "16.7 GB"
@@ -900,7 +932,7 @@
     {
       "title": "Killer Bean",
       "uris": [
-        "https://ankergames.net/download-file/b18442f3f33764662792bca12d19a989c37debbffc4d0b8e"
+        "https://ankergames.net/download-file/81e4c541b54aee6ce9850aee0efe7f594cc72e51049b4548"
       ],
       "uploadDate": "2026-10-20T00:00:00.000Z",
       "fileSize": "9.7 GB"
@@ -908,7 +940,7 @@
     {
       "title": "Skull Horde",
       "uris": [
-        "https://ankergames.net/download-file/6b1b5e9bad8b4b4059ec62dd65f8d3782936cc86987197a0"
+        "https://ankergames.net/download-file/ce49f300001534b1bcddbcfd0249b277d32ef58b232a5898"
       ],
       "uploadDate": "2026-10-20T00:00:00.000Z",
       "fileSize": "1 GB"
@@ -916,7 +948,7 @@
     {
       "title": "Echoes of Mystralia",
       "uris": [
-        "https://ankergames.net/download-file/fff18946eb3754c96f25b587568d32bc4c077da6b1c42a96"
+        "https://ankergames.net/download-file/efb4d8e933a8ede7cb7485215aafad2337e74ed63dba7514"
       ],
       "uploadDate": "2026-10-20T00:00:00.000Z",
       "fileSize": "5.48 GB"
@@ -924,7 +956,7 @@
     {
       "title": "Dressmaker",
       "uris": [
-        "https://ankergames.net/download-file/082561e021b8817b7629ada4efa98533b1edcf7930d59049"
+        "https://ankergames.net/download-file/afb87c25b7c85a30a611d9dbe449a90b75ab107dde2f21c3"
       ],
       "uploadDate": "2026-10-20T00:00:00.000Z",
       "fileSize": "0.44 GB"
@@ -932,7 +964,7 @@
     {
       "title": "The Piper of Dawn",
       "uris": [
-        "https://ankergames.net/download-file/9b78271b185957271e1da1b1bbfef5816ef1039c0dfab5a4"
+        "https://ankergames.net/download-file/b035a4ed6b87fc77ad2800546c9d541ee750cc1be4ad02e6"
       ],
       "uploadDate": "2026-10-20T00:00:00.000Z",
       "fileSize": "1.12 GB"
@@ -940,7 +972,7 @@
     {
       "title": "After Inc: Revival",
       "uris": [
-        "https://ankergames.net/download-file/d98fbbcbbf45c04a71e53b41787b9439876798acd459cdd5"
+        "https://ankergames.net/download-file/e4403eab8cd4d6ba7ef49d58a85b4e18e6206d5ca24b8815"
       ],
       "uploadDate": "2026-10-20T00:00:00.000Z",
       "fileSize": "0.86 GB"
@@ -948,7 +980,7 @@
     {
       "title": "Keep Driving",
       "uris": [
-        "https://ankergames.net/download-file/88c9164154da454ad9657b9d1cd4ec6b1baf8a4f136227b2"
+        "https://ankergames.net/download-file/7c0dea7c288e76fe50cd5e7167d4d15c487be12e3aed6968"
       ],
       "uploadDate": "2026-10-20T00:00:00.000Z",
       "fileSize": "0.55 GB"
@@ -956,7 +988,7 @@
     {
       "title": "Totally Accurate Battle Simulator",
       "uris": [
-        "https://ankergames.net/download-file/f54b099e361519fca2a1e8f373cae470879dc9a858b23b8f"
+        "https://ankergames.net/download-file/f9a37e985146ecb258c32e2f917380ea5c0a808c6fdfaf2d"
       ],
       "uploadDate": "2026-10-19T00:00:00.000Z",
       "fileSize": "1.39 GB"
@@ -964,7 +996,7 @@
     {
       "title": "Stellaris",
       "uris": [
-        "https://ankergames.net/download-file/fd9ec45e8dc5518c051afe878d09165fa0192cdd968ccd8d"
+        "https://ankergames.net/download-file/4a91b3763ec95cef1e60bce963e772e94e43bd201592674b"
       ],
       "uploadDate": "2026-10-19T00:00:00.000Z",
       "fileSize": "17.71 GB"
@@ -972,7 +1004,7 @@
     {
       "title": "Funnel Runners",
       "uris": [
-        "https://ankergames.net/download-file/89022895840eebb06c0e9db38b6276800147f342963e308d"
+        "https://ankergames.net/download-file/98ea1e3fae081109be3e2fa77849689c337345e6441cb6d2"
       ],
       "uploadDate": "2026-10-19T00:00:00.000Z",
       "fileSize": "4.68 GB"
@@ -980,7 +1012,7 @@
     {
       "title": "Pacify",
       "uris": [
-        "https://ankergames.net/download-file/797c02eca8c3e1ecdb45982428be689abf774b8f67c4843f"
+        "https://ankergames.net/download-file/1c93a5ba6cedf4351f4a26ce7023a9ca11991b837ecb1b4e"
       ],
       "uploadDate": "2026-10-19T00:00:00.000Z",
       "fileSize": "5.48 GB"
@@ -988,7 +1020,7 @@
     {
       "title": "VEIN",
       "uris": [
-        "https://ankergames.net/download-file/3720eeba27f27abba653de29cd9cc652b7dd5d19689da6a1"
+        "https://ankergames.net/download-file/a302015d9adf118e8f62e21aae18813cd2bb6bbb98e5ade4"
       ],
       "uploadDate": "2026-10-19T00:00:00.000Z",
       "fileSize": "42.4 GB"
@@ -996,7 +1028,7 @@
     {
       "title": "Teardown",
       "uris": [
-        "https://ankergames.net/download-file/82aff57f1d61c472a3cb9b6ee2108e6caf5f3893f3785568"
+        "https://ankergames.net/download-file/17e0de80bf0a81f0a94903946a1fdac5fab1b62d943334cc"
       ],
       "uploadDate": "2026-10-19T00:00:00.000Z",
       "fileSize": "9 GB"
@@ -1004,7 +1036,7 @@
     {
       "title": "Age of History 3",
       "uris": [
-        "https://ankergames.net/download-file/7362e688b0a06ddcd82862f9c14448666a3ad543c69521d7"
+        "https://ankergames.net/download-file/51c56cec029cbdb306078496e9c175693f9e8440212360df"
       ],
       "uploadDate": "2026-10-19T00:00:00.000Z",
       "fileSize": "0.75 GB"
@@ -1012,7 +1044,7 @@
     {
       "title": "Euro Truck Simulator 2",
       "uris": [
-        "https://ankergames.net/download-file/294460d4243c92bb039dd86db83fd486e39bf21526ba315a"
+        "https://ankergames.net/download-file/fc42f068e4e61cf98e844abb7c7541b998e9af7fd4d0b85f"
       ],
       "uploadDate": "2026-10-19T00:00:00.000Z",
       "fileSize": "37.7 GB"
@@ -1020,7 +1052,7 @@
     {
       "title": "Diablo II: Resurrected – Infernal Edition",
       "uris": [
-        "https://ankergames.net/download-file/b7a92194a1866ed6de4d1383643e317ea240cea160c7f876"
+        "https://ankergames.net/download-file/bca67351b681657e48ffc7657cafbc011466d80ab74eec0a"
       ],
       "uploadDate": "2026-10-19T00:00:00.000Z",
       "fileSize": "38 GB"
@@ -1028,7 +1060,7 @@
     {
       "title": "Motor Town: Behind The Wheel",
       "uris": [
-        "https://ankergames.net/download-file/bb3091adec68f6d00721366c82d5a0204de3769d14c6cfbb"
+        "https://ankergames.net/download-file/a25c8391a2712bbc3fcd91d6a402d400f9a89871c10098a9"
       ],
       "uploadDate": "2026-10-19T00:00:00.000Z",
       "fileSize": "3.1 GB"
@@ -1036,7 +1068,7 @@
     {
       "title": "Pax Autocratica",
       "uris": [
-        "https://ankergames.net/download-file/df6855f8bc3d359f3c70542f228894d0d390d64075dc3485"
+        "https://ankergames.net/download-file/e6dfe7381762d0430c9e83d8473735df5b4c2445f2090e46"
       ],
       "uploadDate": "2026-10-19T00:00:00.000Z",
       "fileSize": "26.3 GB"
@@ -1044,7 +1076,7 @@
     {
       "title": "Age of History 2",
       "uris": [
-        "https://ankergames.net/download-file/87b879b6f377dff501116e7e4a0534229b1c768a21695f7b"
+        "https://ankergames.net/download-file/cd581be458e912bda0efc86447178580ce7a433147c30c0a"
       ],
       "uploadDate": "2026-10-19T00:00:00.000Z",
       "fileSize": "0.47 GB"
@@ -1052,7 +1084,7 @@
     {
       "title": "Cooking Simulator",
       "uris": [
-        "https://ankergames.net/download-file/714cd51dda6db52c0e598d4243d6d75086e64daef2686fca"
+        "https://ankergames.net/download-file/93a99a255087411ca0480aa71de57c41f956529d1465370d"
       ],
       "uploadDate": "2026-10-19T00:00:00.000Z",
       "fileSize": "13 GB"
@@ -1060,7 +1092,7 @@
     {
       "title": "Dawn of Defiance",
       "uris": [
-        "https://ankergames.net/download-file/f1e5c31ea480f5b65f8eb2943836cfe2932931e5c54dc7cc"
+        "https://ankergames.net/download-file/b5ad90a8821ec88eba617b35b38a33b0e586a6d8c4184428"
       ],
       "uploadDate": "2026-10-19T00:00:00.000Z",
       "fileSize": "17.6 GB"
@@ -1068,7 +1100,7 @@
     {
       "title": "Universe Sandbox",
       "uris": [
-        "https://ankergames.net/download-file/00980debd0961d800fd1c72649a2df4fb1322b9048e7f830"
+        "https://ankergames.net/download-file/731ac010208e4a694c6301f88492b964cc4f77e9e8c5408e"
       ],
       "uploadDate": "2026-10-19T00:00:00.000Z",
       "fileSize": "2 GB"
@@ -1076,7 +1108,7 @@
     {
       "title": "WheelMates",
       "uris": [
-        "https://ankergames.net/download-file/dd4ffca25efce74b440ec1d9cbed7aa055ef7c7e3115b576"
+        "https://ankergames.net/download-file/7ca6375682d904b3ea96bd2866d368b5de6fff4ca69a4273"
       ],
       "uploadDate": "2026-10-19T00:00:00.000Z",
       "fileSize": "6.6 GB"
@@ -1084,7 +1116,7 @@
     {
       "title": "Blade and Sorcery",
       "uris": [
-        "https://ankergames.net/download-file/8ae6bbe561ab34d97c955446026ed4a584b9b769f576178b"
+        "https://ankergames.net/download-file/e969b91e1cee26ece1c1ece264e1c705f31591fcb2ab8a41"
       ],
       "uploadDate": "2026-10-19T00:00:00.000Z",
       "fileSize": "15.3 GB"
@@ -1092,7 +1124,7 @@
     {
       "title": "Tape to Tape",
       "uris": [
-        "https://ankergames.net/download-file/4919351c22f01bc9875f9806023195d62a05409ab3d1391e"
+        "https://ankergames.net/download-file/4f8e6e408fe8ef46a128c9aabe6eabbb9688cbe25a2d4336"
       ],
       "uploadDate": "2026-10-19T00:00:00.000Z",
       "fileSize": "0.76 GB"
@@ -1100,7 +1132,7 @@
     {
       "title": "Whiskerwood",
       "uris": [
-        "https://ankergames.net/download-file/f1f5dc11225f9d37114b07206700c7652c61862906694730"
+        "https://ankergames.net/download-file/4edd93efb2855f936d231a6375ec4372bf891d7b6c601a58"
       ],
       "uploadDate": "2026-10-19T00:00:00.000Z",
       "fileSize": "2.5 GB"
@@ -1108,7 +1140,7 @@
     {
       "title": "Scavland",
       "uris": [
-        "https://ankergames.net/download-file/e1c60f31839c1871aa7c40fa947959d585d39b04c74be3f5"
+        "https://ankergames.net/download-file/b4ecb3b61a8037bac5c30afedc786c8e93cb706377561c11"
       ],
       "uploadDate": "2026-10-19T00:00:00.000Z",
       "fileSize": "0.85 GB"
@@ -1116,7 +1148,7 @@
     {
       "title": "ANTONBLAST",
       "uris": [
-        "https://ankergames.net/download-file/56495441725806813997231e761957511f20bbe077fa40b9"
+        "https://ankergames.net/download-file/6f95b1aa357cbb014d630cd2fef1f1dfc182b6e6dd7bac51"
       ],
       "uploadDate": "2026-10-19T00:00:00.000Z",
       "fileSize": "1.57 GB"
@@ -1124,7 +1156,7 @@
     {
       "title": "Supraworld",
       "uris": [
-        "https://ankergames.net/download-file/7751b8fbe8b4b020a000091d5c83587bff8a54eaab69032d"
+        "https://ankergames.net/download-file/29fb3779d05fa5dd73973a713f8bf0442f07a0e9b950e8eb"
       ],
       "uploadDate": "2026-10-19T00:00:00.000Z",
       "fileSize": "3.5 GB"
@@ -1132,7 +1164,7 @@
     {
       "title": "Mortal Kombat 1",
       "uris": [
-        "https://ankergames.net/download-file/57eb4c45de22cafd9cd308ae639872f7a99c28b69b12d5af"
+        "https://ankergames.net/download-file/5a8e00f18d7519dd46a4956166a22f4d73b9db622b124e54"
       ],
       "uploadDate": "2026-10-18T00:00:00.000Z",
       "fileSize": "167.97 GB"
@@ -1140,7 +1172,7 @@
     {
       "title": "DayZ",
       "uris": [
-        "https://ankergames.net/download-file/5af738b883d84f32953167ae86f6f1223eea5af75709c5b1"
+        "https://ankergames.net/download-file/262347d4cd73694eba9d0ef4586d9d72e567c5152134c73d"
       ],
       "uploadDate": "2026-10-18T00:00:00.000Z",
       "fileSize": "20.41 GB"
@@ -1148,7 +1180,7 @@
     {
       "title": "ICARUS",
       "uris": [
-        "https://ankergames.net/download-file/9aab5bf45a6d3278c7435f1314e41790c058af74ca96f6f8"
+        "https://ankergames.net/download-file/28fe85fb0cc9941c0bedc170463e658c50bc6d1cf211bdbe"
       ],
       "uploadDate": "2026-10-18T00:00:00.000Z",
       "fileSize": "40.6 GB"
@@ -1156,7 +1188,7 @@
     {
       "title": "Ys X: Proud Nordics",
       "uris": [
-        "https://ankergames.net/download-file/7643c1fe09608b6813ef4210681c8aed41fb3bd329c9f932"
+        "https://ankergames.net/download-file/07e9226595ef02070b80559cb3a6c6e0ac8db9f46248a805"
       ],
       "uploadDate": "2026-10-18T00:00:00.000Z",
       "fileSize": "7.6 GB"
@@ -1164,7 +1196,7 @@
     {
       "title": "SurrounDead",
       "uris": [
-        "https://ankergames.net/download-file/45b0966dfa9c824c5fbc942f289348fee0a7bce7da488913"
+        "https://ankergames.net/download-file/adfac49e37d9b6f28e8cb3bbfdcaa78255e9363db920c1dd"
       ],
       "uploadDate": "2026-10-18T00:00:00.000Z",
       "fileSize": "1.5 GB"
@@ -1172,7 +1204,7 @@
     {
       "title": "Third Crisis: Neon Nights",
       "uris": [
-        "https://ankergames.net/download-file/318928478777d21902150ce52c64b8ac5fb3578552462d35"
+        "https://ankergames.net/download-file/98e0a5f2b6ad66957da9f020c564dede9da663886723cd82"
       ],
       "uploadDate": "2026-10-18T00:00:00.000Z",
       "fileSize": "2 GB"
@@ -1180,7 +1212,7 @@
     {
       "title": "Slay the Spire 2",
       "uris": [
-        "https://ankergames.net/download-file/97814125388588c524fe95ce95b7983bb711cfae4fa22843"
+        "https://ankergames.net/download-file/dfbe5f94a298849394733a7d9374a0239ff46fc87ca0b829"
       ],
       "uploadDate": "2026-10-18T00:00:00.000Z",
       "fileSize": "1.5 GB"
@@ -1188,7 +1220,7 @@
     {
       "title": "NBA 2K27",
       "uris": [
-        "https://ankergames.net/download-file/35609c56ffacdac39f8f400c6ffafd4db3d4efa8642ed651"
+        "https://ankergames.net/download-file/1ec3f51c05ef7a65fe1fbf8d83e9c9db8523a9ab12db1814"
       ],
       "uploadDate": "2026-10-18T00:00:00.000Z",
       "fileSize": "103 GB"
@@ -1196,7 +1228,7 @@
     {
       "title": "Scale the Depths",
       "uris": [
-        "https://ankergames.net/download-file/d4bb50f1d32eec3ba2e6b9e7d0a607831f85d774e29ac692"
+        "https://ankergames.net/download-file/241a38893b4eb645802abe37b84c0c34d8881d8eb7d8df1f"
       ],
       "uploadDate": "2026-10-18T00:00:00.000Z",
       "fileSize": "0.38 GB"
@@ -1204,7 +1236,7 @@
     {
       "title": "Mall Simulator",
       "uris": [
-        "https://ankergames.net/download-file/15bae5036602a6ef0e2faadd1315892e664aa3b601afe798"
+        "https://ankergames.net/download-file/059b5b6adae125f6dc7b55bc22f1d523e79cf8c46331bfff"
       ],
       "uploadDate": "2026-10-18T00:00:00.000Z",
       "fileSize": "1.42 GB"
@@ -1212,7 +1244,7 @@
     {
       "title": "Esports Manager 2026",
       "uris": [
-        "https://ankergames.net/download-file/a3af514e9440ac7123aa776a3762f99043bf3c083c93dd09"
+        "https://ankergames.net/download-file/17dcb318f8f93e766346f34ac8ae6b2188841fbaf4143012"
       ],
       "uploadDate": "2026-10-18T00:00:00.000Z",
       "fileSize": "2.7 GB"
@@ -1220,7 +1252,7 @@
     {
       "title": "Carry The Glass",
       "uris": [
-        "https://ankergames.net/download-file/b5f286554b2ad136ba1cd83191ea4321b13308aadd14b674"
+        "https://ankergames.net/download-file/3474d34ee0a14da5a3a08e57a70d42d71d80e3e3e152a58d"
       ],
       "uploadDate": "2026-10-18T00:00:00.000Z",
       "fileSize": "1 GB"
@@ -1228,7 +1260,7 @@
     {
       "title": "Capcom Fighting Collection",
       "uris": [
-        "https://ankergames.net/download-file/dc30108c692efc04e3dbd7566869f3476eb2c2de949cf73c"
+        "https://ankergames.net/download-file/7cad08e22bd15c47dfe60af03f08d60366ab96a4b3958abd"
       ],
       "uploadDate": "2026-10-18T00:00:00.000Z",
       "fileSize": "3.5 GB"
@@ -1236,7 +1268,7 @@
     {
       "title": "Remnant II",
       "uris": [
-        "https://ankergames.net/download-file/ab6f5721c835a27bef3474ca4482df6c2db75eca82401f56"
+        "https://ankergames.net/download-file/d8b752177cd02544deb9bfa7734da4301a41c8fc6a170b0a"
       ],
       "uploadDate": "2026-10-18T00:00:00.000Z",
       "fileSize": "86.1 GB"
@@ -1244,7 +1276,7 @@
     {
       "title": "Halloween: The Game",
       "uris": [
-        "https://ankergames.net/download-file/bea055b38587dea7d7e9247b6b0f3de8bb3a3d7a3036767f"
+        "https://ankergames.net/download-file/3d6f643d4dc9246e9be865f1e0b6c106db9b2766fd686302"
       ],
       "uploadDate": "2026-10-17T00:00:00.000Z",
       "fileSize": "28 GB"
@@ -1252,7 +1284,7 @@
     {
       "title": "Gunfire Reborn",
       "uris": [
-        "https://ankergames.net/download-file/1ba3573d4d9771a91d2e78ecb33b6e7c0fe6764037a091f0"
+        "https://ankergames.net/download-file/0ccfe433a96c1b12f32dcfc235033bfb25f1ecc54cb329b5"
       ],
       "uploadDate": "2026-10-17T00:00:00.000Z",
       "fileSize": "4.6 GB"
@@ -1260,7 +1292,7 @@
     {
       "title": "PlateUp!",
       "uris": [
-        "https://ankergames.net/download-file/c2c589415bf24f5c883dab149a8d40f529447ee5ed41de68"
+        "https://ankergames.net/download-file/d5845327fd3432f9b6a113771f051bd588aaaac46432ff69"
       ],
       "uploadDate": "2026-10-17T00:00:00.000Z",
       "fileSize": "0.47 GB"
@@ -1268,7 +1300,7 @@
     {
       "title": "It Takes Two",
       "uris": [
-        "https://ankergames.net/download-file/6e6c0625a59b842cad73233b5303549e094865d7a7b3ac4e"
+        "https://ankergames.net/download-file/ad7245d95a8fff1fe5436768258592fb3c09e108e76338a0"
       ],
       "uploadDate": "2026-10-17T00:00:00.000Z",
       "fileSize": "44.6 GB"
@@ -1276,7 +1308,7 @@
     {
       "title": "LONESTAR",
       "uris": [
-        "https://ankergames.net/download-file/3e661b09e863bc57064298073b05861aabda8456b0d51f44"
+        "https://ankergames.net/download-file/e19977be420a5ffb39a049669b0ca8f6f4068f297b4eee88"
       ],
       "uploadDate": "2026-10-17T00:00:00.000Z",
       "fileSize": "0.36 GB"
@@ -1284,7 +1316,7 @@
     {
       "title": "Anime Shop Simulator",
       "uris": [
-        "https://ankergames.net/download-file/f9460b3b552b1cc41e33450e92e2d22fcd1aeaeb902e9fd4"
+        "https://ankergames.net/download-file/ff6e27553c612b37e1d19e9945ee9eec65fe1ae87e3654a0"
       ],
       "uploadDate": "2026-10-17T00:00:00.000Z",
       "fileSize": "1.2 GB"
@@ -1292,7 +1324,7 @@
     {
       "title": "Vampire Survivors",
       "uris": [
-        "https://ankergames.net/download-file/2d1d5509051d3fad9fdf074b91b9c27756503c0ea14829e3"
+        "https://ankergames.net/download-file/764180df6f62a68347c07c6298abb6ef3de1121da1f1a927"
       ],
       "uploadDate": "2026-10-17T00:00:00.000Z",
       "fileSize": "1.27 GB"
@@ -1300,7 +1332,7 @@
     {
       "title": "Star Birds",
       "uris": [
-        "https://ankergames.net/download-file/c6958d6b57c07aa8d17ac2252cf221a47fb470ee35fb8395"
+        "https://ankergames.net/download-file/704bb1bc387d991d412939f40871579fce0dd2721a2449b7"
       ],
       "uploadDate": "2026-10-17T00:00:00.000Z",
       "fileSize": "1.2 GB"
@@ -1308,7 +1340,7 @@
     {
       "title": "Alchemy Factory",
       "uris": [
-        "https://ankergames.net/download-file/879b7f26c36cb6ba03ac9c9739e580a2ca9650a10c65a26b"
+        "https://ankergames.net/download-file/65fe4b5205ae15587c38a477fcb7a6ea6e1f61565c94621f"
       ],
       "uploadDate": "2026-10-17T00:00:00.000Z",
       "fileSize": "3.4 GB"
@@ -1316,7 +1348,7 @@
     {
       "title": "Nordic Ashes: Survivors of Ragnarok",
       "uris": [
-        "https://ankergames.net/download-file/a76d1dbb90edfe17b8a3ec1fa9212350a293e91482446aec"
+        "https://ankergames.net/download-file/d73e7144ed65bb352920bab8e79c6d1ab5f707e5a9fb2393"
       ],
       "uploadDate": "2026-10-17T00:00:00.000Z",
       "fileSize": "0.93 GB"
@@ -1324,7 +1356,7 @@
     {
       "title": "Tap Tap Loot",
       "uris": [
-        "https://ankergames.net/download-file/06dc73416582e933f1772dc2e3cc057a1d7390396eb4f535"
+        "https://ankergames.net/download-file/bda88888f967e2dc0c004ab5e26a9924a5364ce17cad60e7"
       ],
       "uploadDate": "2026-10-17T00:00:00.000Z",
       "fileSize": "0.18 GB"
@@ -1332,7 +1364,7 @@
     {
       "title": "Paralives",
       "uris": [
-        "https://ankergames.net/download-file/ab17a1de0f4ec2a5a8475cf6a41f17fe32e8785a37bb5384"
+        "https://ankergames.net/download-file/70e8d19c175568287eef38a467159ffdd0a2e81560e1e41a"
       ],
       "uploadDate": "2026-10-17T00:00:00.000Z",
       "fileSize": "5.47 GB"
@@ -1340,7 +1372,7 @@
     {
       "title": "Back to the Dawn",
       "uris": [
-        "https://ankergames.net/download-file/11143d530624cf4b26839acfb4acb8752bf8259f0e295c32"
+        "https://ankergames.net/download-file/a16cb50c77220d6bef513f69aff6c1b378f684428fa0414d"
       ],
       "uploadDate": "2026-10-17T00:00:00.000Z",
       "fileSize": "2.2 GB"
@@ -1348,7 +1380,7 @@
     {
       "title": "Teenage Mutant Ninja Turtles Shredder’s Revenge",
       "uris": [
-        "https://ankergames.net/download-file/925e66ff6817cd9bc76293061aa870dcea35cdbbeb019573"
+        "https://ankergames.net/download-file/38159e264c2c1cf356de6578bffbd6b1fde4335b10675f93"
       ],
       "uploadDate": "2026-10-17T00:00:00.000Z",
       "fileSize": "1.6 GB"
@@ -1356,7 +1388,7 @@
     {
       "title": "Wreckfest 2",
       "uris": [
-        "https://ankergames.net/download-file/249969a39ab3bc0e7a574880630ba4e2628da82f06639fb5"
+        "https://ankergames.net/download-file/85ee606d015d513751c94ce41978c512c0a60f5ce04bfee1"
       ],
       "uploadDate": "2026-10-17T00:00:00.000Z",
       "fileSize": "17.4 GB"
@@ -1364,7 +1396,7 @@
     {
       "title": "Starsand Island",
       "uris": [
-        "https://ankergames.net/download-file/017b40e77ab4ac6a52c66dc640e0f608b7db44326dc7fa8f"
+        "https://ankergames.net/download-file/b00d83827acc318dbca5fed60ce517dfcedf02c8824b2c8a"
       ],
       "uploadDate": "2026-10-17T00:00:00.000Z",
       "fileSize": "8 GB"
@@ -1372,7 +1404,7 @@
     {
       "title": "House Flipper Remastered Collection",
       "uris": [
-        "https://ankergames.net/download-file/238b276ef4d7eadfae3069263b4bbecc646da1794285ecc9"
+        "https://ankergames.net/download-file/bb1d3d80d0202d98dbc4dd1bc4ef162280721599e29151ab"
       ],
       "uploadDate": "2026-10-17T00:00:00.000Z",
       "fileSize": "13.8 GB"
@@ -1380,7 +1412,7 @@
     {
       "title": "Invincible VS",
       "uris": [
-        "https://ankergames.net/download-file/8474e5a16d74f703faf79b9fe5c9ec049be5ee579080fa7b"
+        "https://ankergames.net/download-file/92d67e7d8d5dc223e1b9e00b832d77863000258c55363904"
       ],
       "uploadDate": "2026-10-17T00:00:00.000Z",
       "fileSize": "10.31 GB"
@@ -1388,7 +1420,7 @@
     {
       "title": "The Weeping Swan: Ten Days of the City's Fall",
       "uris": [
-        "https://ankergames.net/download-file/93444143881eb1d6d5bdf6ea9e79481c52ec87fd177ab450"
+        "https://ankergames.net/download-file/2c1e84c83b59ef410a4deb051920a35eed0fc1d468dc1bc7"
       ],
       "uploadDate": "2026-10-17T00:00:00.000Z",
       "fileSize": "2.15 GB"
@@ -1396,7 +1428,7 @@
     {
       "title": "ZERO Sievert",
       "uris": [
-        "https://ankergames.net/download-file/b624be514ec134cc55d22a00cb8435a450450f29dc91ae16"
+        "https://ankergames.net/download-file/3e812ddab35985a5519e8eef6f2e6fb6b0a9f89fc51c928f"
       ],
       "uploadDate": "2026-10-17T00:00:00.000Z",
       "fileSize": "0.72 GB"
@@ -1404,7 +1436,7 @@
     {
       "title": "Parkitect",
       "uris": [
-        "https://ankergames.net/download-file/c0954abc73814de55c121d8d967a04f96eeaf0636542c992"
+        "https://ankergames.net/download-file/a9532238d965936975ef613754e622f9ef28ba2c5ccb869d"
       ],
       "uploadDate": "2026-10-17T00:00:00.000Z",
       "fileSize": "0.92 GB"
@@ -1412,7 +1444,7 @@
     {
       "title": "JDM: Japanese Drift Master",
       "uris": [
-        "https://ankergames.net/download-file/119fe11c3537f94a434b1b5c28f4f22febaf1cef1ebc6034"
+        "https://ankergames.net/download-file/5d883b56f72ac5e66dae8a3a9e143539f62dc92878571b05"
       ],
       "uploadDate": "2026-10-17T00:00:00.000Z",
       "fileSize": "20.8 GB"
@@ -1420,7 +1452,7 @@
     {
       "title": "R.I.P. - Reincarnation Insurance Program",
       "uris": [
-        "https://ankergames.net/download-file/26eb1e68836978e2d10518adb7ab5d77a30933e3c323fe73"
+        "https://ankergames.net/download-file/ac2c01af86c632417072c4547d6b292e978daaff2d85cfb8"
       ],
       "uploadDate": "2026-10-17T00:00:00.000Z",
       "fileSize": "9.7 GB"
@@ -1428,7 +1460,7 @@
     {
       "title": "Going Medieval",
       "uris": [
-        "https://ankergames.net/download-file/175eae2883b3ff2811f3e63a4a6a441924141ea7b69879e7"
+        "https://ankergames.net/download-file/112b9c6d985d5f17b3fe6f09859c8a0f0fc90a81756a14ca"
       ],
       "uploadDate": "2026-10-17T00:00:00.000Z",
       "fileSize": "0.7 GB"
@@ -1436,7 +1468,7 @@
     {
       "title": "Dinoblade",
       "uris": [
-        "https://ankergames.net/download-file/a374fde8688cbb69329ba419304ae155b42ab79b23d786ef"
+        "https://ankergames.net/download-file/e6b10bc3d095f71ca7f4871ebdccc670967ba9348ad904ab"
       ],
       "uploadDate": "2026-10-17T00:00:00.000Z",
       "fileSize": "12.1 GB"
@@ -1444,7 +1476,7 @@
     {
       "title": "Dragon's Dogma 2",
       "uris": [
-        "https://ankergames.net/download-file/60d76ac608f4108f248a5281ccc54cae2509ac192aa73977"
+        "https://ankergames.net/download-file/5cab76329be763733ad80fe4c09b80f96ec819e8134dc714"
       ],
       "uploadDate": "2026-10-17T00:00:00.000Z",
       "fileSize": "88.9 GB"
@@ -1452,7 +1484,7 @@
     {
       "title": "Geometry Dash",
       "uris": [
-        "https://ankergames.net/download-file/adbd4cdd94ee02b290ace4ab4869807eebf8f6a3d36ba405"
+        "https://ankergames.net/download-file/aaf793fb1c23a0ee00abd4f5207c0ec6069d52e2a65f296b"
       ],
       "uploadDate": "2026-10-17T00:00:00.000Z",
       "fileSize": "0.39 GB"
@@ -1460,7 +1492,7 @@
     {
       "title": "Global Rescue",
       "uris": [
-        "https://ankergames.net/download-file/b7154cf91cc4fa07a4b769bdcb46ad6cd6d8ace75710ac7e"
+        "https://ankergames.net/download-file/5876e8536b5d4a3ecb971927e1b22eee6b02daeac742aa1a"
       ],
       "uploadDate": "2026-10-17T00:00:00.000Z",
       "fileSize": "2 GB"
@@ -1468,7 +1500,7 @@
     {
       "title": "Bodycam",
       "uris": [
-        "https://ankergames.net/download-file/9e84abb4034aec6f2a2260f12c24505c3f325681f10fc839"
+        "https://ankergames.net/download-file/a5421174013b458ec6a0a5eab5c40914aa8f6cfbd48e6019"
       ],
       "uploadDate": "2026-10-17T00:00:00.000Z",
       "fileSize": "50.7 GB"
@@ -1476,7 +1508,7 @@
     {
       "title": "Beat Saber",
       "uris": [
-        "https://ankergames.net/download-file/ef376c416d010d98fe27b7057be81261556bcd209e7a21fc"
+        "https://ankergames.net/download-file/ea8ff567e0caf311dd45a3cad2a4bb597810122ce963d24c"
       ],
       "uploadDate": "2026-10-16T00:00:00.000Z",
       "fileSize": "5.1 GB"
@@ -1484,7 +1516,7 @@
     {
       "title": "Tainted Grail: The Fall of Avalon",
       "uris": [
-        "https://ankergames.net/download-file/d3c555fc2c66fabdda8ae823ed00d5398bc46caabcd3491e"
+        "https://ankergames.net/download-file/2753698661a84dde58c312f1eef51d81c4145b64c8810a28"
       ],
       "uploadDate": "2026-10-16T00:00:00.000Z",
       "fileSize": "26.3 GB"
@@ -1492,7 +1524,7 @@
     {
       "title": "Outlast 2",
       "uris": [
-        "https://ankergames.net/download-file/d89343ef89914c890b63f8d02b822419689e58676b13e1ae"
+        "https://ankergames.net/download-file/5929151f9d3859a56fba57cf6715780aa009977df9c93a16"
       ],
       "uploadDate": "2026-10-16T00:00:00.000Z",
       "fileSize": "23.4 GB"
@@ -1500,7 +1532,7 @@
     {
       "title": "DragonSword : Awakening",
       "uris": [
-        "https://ankergames.net/download-file/485edb0c5d6747e5b4327881056b1d0a75ff04847319c3af"
+        "https://ankergames.net/download-file/2654da46f7183892a9240ecf7618606ea3b10b69252b659c"
       ],
       "uploadDate": "2026-10-16T00:00:00.000Z",
       "fileSize": "16.8 GB"
@@ -1508,7 +1540,7 @@
     {
       "title": "Low-Budget Repairs",
       "uris": [
-        "https://ankergames.net/download-file/0ad04ba50304f869b32b68cd9783ffd6eda190fcafd01744"
+        "https://ankergames.net/download-file/e2468967c17d8868b9f647f7779d2b72051a4904b09aa94a"
       ],
       "uploadDate": "2026-10-16T00:00:00.000Z",
       "fileSize": "13.7 GB"
@@ -1516,7 +1548,7 @@
     {
       "title": "Denshattack!",
       "uris": [
-        "https://ankergames.net/download-file/8ec561b8ea6b732c6e611af4a89466b715177c668903ac12"
+        "https://ankergames.net/download-file/583ab8a262547e346c7c5454ec3c65292e1ff788d48e5435"
       ],
       "uploadDate": "2026-10-16T00:00:00.000Z",
       "fileSize": "7.25 GB"
@@ -1524,7 +1556,7 @@
     {
       "title": "Dyson Sphere Program",
       "uris": [
-        "https://ankergames.net/download-file/055fd212e9636a0b65e628e95d5ccceb58a587427d9e6202"
+        "https://ankergames.net/download-file/d9dcd61a1b53c58adbe8a3d91b8613b522a3a5ece353311b"
       ],
       "uploadDate": "2026-10-16T00:00:00.000Z",
       "fileSize": "2.32 GB"
@@ -1532,7 +1564,7 @@
     {
       "title": "Rhythm Doctor",
       "uris": [
-        "https://ankergames.net/download-file/a3b4f0931b27ac47ba8a3dcb9322b34173b16ec157b97a1d"
+        "https://ankergames.net/download-file/2e7f99062d46605450ce8250fbc93338cef9a230ff0b9687"
       ],
       "uploadDate": "2026-10-16T00:00:00.000Z",
       "fileSize": "0.55 GB"
@@ -1540,7 +1572,7 @@
     {
       "title": "Eden Crafters",
       "uris": [
-        "https://ankergames.net/download-file/12aada3d8a53a0192996ec9f4feda41e9fd8ca1c8f796cab"
+        "https://ankergames.net/download-file/36433cdc9a1829e4e85e0bda6eb81ff462536f749c7fbd2f"
       ],
       "uploadDate": "2026-10-16T00:00:00.000Z",
       "fileSize": "2.07 GB"
@@ -1548,7 +1580,7 @@
     {
       "title": "MENACE",
       "uris": [
-        "https://ankergames.net/download-file/2fbd13f5b82fd0d164cadb862690ad0c533a03cfd6aefa56"
+        "https://ankergames.net/download-file/cc9070556f967dea9f498d3152ea2e4d9a602fea3f580fa7"
       ],
       "uploadDate": "2026-10-16T00:00:00.000Z",
       "fileSize": "7.29 GB"
@@ -1556,7 +1588,7 @@
     {
       "title": "Conquest Dark",
       "uris": [
-        "https://ankergames.net/download-file/6758801cc7a6aa319d151075cb5424f0b7760abddfb72c91"
+        "https://ankergames.net/download-file/46deebb2bbed9f69a9497f89dc0180a17c5961ce8a27b4da"
       ],
       "uploadDate": "2026-10-16T00:00:00.000Z",
       "fileSize": "0.49 GB"
@@ -1564,42 +1596,10 @@
     {
       "title": "MEMORIAPOLIS",
       "uris": [
-        "https://ankergames.net/download-file/c37530377fe4bb224141af0398149bbd8063ad0e3434bca0"
+        "https://ankergames.net/download-file/722b382a08d322fd692e3f720f1588538d62d0d6138b8a37"
       ],
       "uploadDate": "2026-10-16T00:00:00.000Z",
       "fileSize": "3.72 GB"
-    },
-    {
-      "title": "Road to Vostok",
-      "uris": [
-        "https://ankergames.net/download-file/8ab86ba8c56f1ea70b3f72f72505d03d833e75a5434d0456"
-      ],
-      "uploadDate": "2026-10-16T00:00:00.000Z",
-      "fileSize": "3.5 GB"
-    },
-    {
-      "title": "Nova Roma",
-      "uris": [
-        "https://ankergames.net/download-file/570e5480ec34546a623d0882d0137260a454e658b722b3f2"
-      ],
-      "uploadDate": "2026-10-16T00:00:00.000Z",
-      "fileSize": "0.49 GB"
-    },
-    {
-      "title": "Tiny Aquarium: Social Fishkeeping",
-      "uris": [
-        "https://ankergames.net/download-file/91e257d1f0583b0e6fcd9b95fb753e5f10f59d8eeea42eaf"
-      ],
-      "uploadDate": "2026-10-16T00:00:00.000Z",
-      "fileSize": "0.33 GB"
-    },
-    {
-      "title": "Cleared Hot",
-      "uris": [
-        "https://ankergames.net/download-file/9f03033494d2c22f5c179f334d967e3207fef7015e18b47c"
-      ],
-      "uploadDate": "2026-10-16T00:00:00.000Z",
-      "fileSize": "2.9 GB"
     }
   ]
 }
